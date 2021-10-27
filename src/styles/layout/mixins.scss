@@ -17,13 +17,13 @@
 }
 
 @mixin tablets() {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $breakpoint-tablet) {
     @content;
   }
 }
 
 @mixin phones() {
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: $breakpoint-mobile) {
     @content;
   }
 }

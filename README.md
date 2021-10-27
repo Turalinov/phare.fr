@@ -1,2 +1,2 @@
 # phare.fr
-Phare
+Phare est gardien de votre politique sociale

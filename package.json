@@ -1,27 +1,38 @@
 {
-  "name": "modal",
+  "name": "phare",
   "version": "1.0.0",
-  "description": "modal window functionality",
-  "main": "index.js",
+  "description": "phare est gardien de votre politique sociale",
   "scripts": {
     "gulp": "cross-env NODE_ENV=dev gulp",
     "build": "cross-env NODE_ENV=prod gulp build"
   },
+  "lint-staged": {
+    "*.js": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Turalinov/modal.git"
+    "url": "git+https://github.com/Turalinov/phare.fr.git"
   },
   "author": "Turalinov Ruslan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Turalinov/modal/issues"
+    "url": "https://github.com/Turalinov/phare.fr/issues"
   },
-  "homepage": "https://github.com/Turalinov/modal#readme",
+  "homepage": "https://github.com/Turalinov/phare.fr#readme",
   "devDependencies": {
     "@babel/core": "^7.15.0",
+    "@babel/eslint-parser": "^7.15.8",
     "@babel/preset-env": "^7.15.0",
     "browser-sync": "^2.27.5",
     "cross-env": "^7.0.3",
+    "eslint": "^8.1.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.2",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
@@ -37,9 +48,16 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgo": "^2.2.1",
     "gulp-uglify": "^3.0.2",
+    "husky": "^7.0.4",
     "sass": "^1.37.5"
   },
   "dependencies": {
     "normalize.css": "^8.0.1"
-  }
+  },
+  "keywords": [
+    "gulp",
+    "js",
+    "sass",
+    "linters"
+  ]
 }
