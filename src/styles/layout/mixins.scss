@@ -1,0 +1,29 @@
+@mixin roboto() {
+  font-family: 'Roboto',
+  sans-serif;
+}
+
+@mixin roboto($style: regular) {
+  font-family: "Nato Sans", Arial, sans-serif;
+
+  @if $style==regular {
+    font-weight: 400;
+  }
+
+  @if $style==medium {
+    font-weight: 500;
+  }
+
+}
+
+@mixin tablets() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin phones() {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}

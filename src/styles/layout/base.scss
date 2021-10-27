@@ -1,0 +1,192 @@
+:root {
+  box-sizing: border-box;
+  font-size: 16px;
+
+  // @include phones {
+  // }
+  // @include tablets {
+  // }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialised;
+  -moz-osx-font-smoothing: grayscale;
+  @include roboto;
+  color: $black;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul>li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn {
+  // color: $white;
+  // background-color: $brown;
+  // border-radius: 10px;
+  // padding: rem(19px) rem(42px);
+  // font-size: rem(18px);
+  // text-transform: uppercase;
+  // border: 1px solid transparent;
+  
+
+  // @include tablets {
+  //   font-size: rem(16px);
+  //   padding: rem(9px) rem(32px);
+  // }
+
+  // &:focus {
+  //   border-color: $brown-dark;
+  // }
+
+  // &:hover {
+  //   background-color: $brown-hover;
+  // }
+}
+
+
+// .btn--large {
+//   padding: rem(19px) rem(99px);
+// }
+
+input:not([type=checkbox]):not([type=radio]),
+select {
+  // width: 100%;
+  // outline: none;
+  // background: #FFFFFF;
+  // @include regular();
+  // color: $black;
+  // border-radius: 10px;
+  // padding: rem(19px) rem(23px);
+  // border: 1px solid transparent;
+
+  // &:focus {
+  //   border-color: $brown-dark;
+  // }
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 400;
+}
+
+h1 {
+  // font-size: rem(36px);
+  // @include regular;
+  // text-transform: uppercase;
+
+  // @include tablets {
+  //   font-size: rem(24px);
+  // }
+
+  // @include phones {
+  //   font-size: rem(18px);
+  }
+}
+
+h2 {
+  // font-size: rem(36px);
+  // @include regular;
+  // text-transform: uppercase;
+
+  // @include tablets {
+  //   font-size: rem(24px);
+  // }
+
+}
+
+h3 {
+  // font-size: rem(24px);
+  // font-weight: 600;
+
+  // @include tablets {
+  //   font-size: rem(22px);
+  // }
+
+  // @include phones {
+  //   font-size: rem(18px);
+  // }
+}
+
+h4 {
+  // font-size: rem(22px);
+  // font-weight: 500;
+
+  // @include tablets {
+  //   font-size: rem(22px);
+  // }
+
+  // @include phones {
+  //   font-size: rem(16px);
+  // }
+}
+
+h5 {
+  // font-size: rem(18px);
+  // font-weight: 500;
+
+  // @include phones {
+  //   font-size: rem(16px);
+  // }
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper__content {
+  flex: 1;
+}
+
+.container {
+  width: 95%;
+  max-width: 1430px;
+  margin: 0 auto;
+}
