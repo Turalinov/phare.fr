@@ -1,5 +1,5 @@
-const m = 1
+m;
 
-console.log(m)
+
 
 

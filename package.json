@@ -49,6 +49,7 @@
     "gulp-svgo": "^2.2.1",
     "gulp-uglify": "^3.0.2",
     "husky": "^7.0.4",
+    "lint-staged": "^11.2.6",
     "sass": "^1.37.5"
   },
   "dependencies": {

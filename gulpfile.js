@@ -116,7 +116,7 @@ task('watch', () => {
   watch([`./${SRC_PATH}/images/*.png`, `./${SRC_PATH}/images/*.svg`], series('images'))
 })
 
-task('default', 
+task('default',
   series(
     "clean",
     parallel("copy:html", "styles", "scripts", "icons", "favicon", "images"),
