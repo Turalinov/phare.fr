@@ -1,4 +1,14 @@
 .header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid rgba(#000, .07);
+  background-color: $white;
+
+  @include phones {
+    padding: 10px 0;
+  }
+
   & .container {
     display: flex;
     align-items: center;
@@ -8,6 +18,10 @@
 
 .header__btns {
   display: flex;
+
+  @include phones {
+    display: none;
+  }
 }
 
 .header__btn {

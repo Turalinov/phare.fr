@@ -1,8 +1,11 @@
 $black: #212121;
 $blue: #374483;
-$white: #FFFFFF;
+$white: #fff;
 
-$breakpoint-tablet: 768px;
-$breakpoint-mobile: 480px;
+$breakpoint-tablet: 1023px;
+$breakpoint-mobile: 768px;
 
 $containerWidth: 1200px;
+
+$z-index-menu-toggle: 6;
+$z-index-menu-dropdown: 5;
