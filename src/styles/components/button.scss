@@ -1,0 +1,37 @@
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn {
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 15px 30px;
+  color: $white;
+  background-color: $blue;
+  @include jost(medium);
+
+  // @include tablets {
+  //   font-size: rem(16px);
+  //   padding: rem(9px) rem(32px);
+  // }
+
+  // &:focus {
+  //   border-color: $brown-dark;
+  // }
+
+  // &:hover {
+  //   background-color: $brown-hover;
+  // }
+}
+
+
+// .btn--large {
+//   padding: rem(19px) rem(99px);
+// }

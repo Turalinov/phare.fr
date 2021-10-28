@@ -1,19 +1,17 @@
-@mixin roboto() {
-  font-family: 'Roboto',
-  sans-serif;
-}
+@mixin jost($style: regular) {
+  font-family: "Jost", "Arial", sans-serif;
 
-@mixin roboto($style: regular) {
-  font-family: "Nato Sans", Arial, sans-serif;
-
-  @if $style==regular {
+  @if $style == regular {
     font-weight: 400;
   }
 
-  @if $style==medium {
+  @if $style == medium {
     font-weight: 500;
   }
 
+  @if $style == semibold {
+    font-weight: 600;
+  }
 }
 
 @mixin tablets() {

@@ -1,10 +1,7 @@
-$black: #fff;
-
-$breakpoint-tablet: 768px;
-$breakpoint-mobile: 480px;
-
-@import "./layout/fonts.scss";
-@import "./layout/mixins.scss";
-@import "./layout/base.scss";
-
-@import "./blocks/*.scss";
+@import "./base/vars.scss";
+@import "./helpers/functions.scss";
+@import "./helpers/mixins.scss";
+@import "./base/base.scss";
+@import "./base/fonts.scss";
+@import "./layout/*.scss";
+@import "./components/*.scss";

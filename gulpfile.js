@@ -15,6 +15,8 @@ const uglify = require('gulp-uglify');
 const svgo = require('gulp-svgo');
 const svgSprite = require('gulp-svg-sprite');
 const gulpif = require('gulp-if');
+const plumber = require('gulp-plumber');
+const fileinclude = require('gulp-file-include');
 
 const env = process.env.NODE_ENV;
 const {SRC_PATH, DIST_PATH, STYLES_LIBS, JS_LIBS} = require('./gulp.config');
@@ -25,7 +27,9 @@ task("clean", () => {
 });
 
 task("copy:html", () => {
-  return src([`${SRC_PATH}/*.html`, `${SRC_PATH}/*.xml`])
+  return src(`${SRC_PATH}/*.html`)
+    .pipe(plumber())
+    .pipe(fileinclude())
     .pipe(dest(DIST_PATH))
     .pipe(reload({stream: true}))
 });
@@ -39,7 +43,7 @@ task("styles", () => {
     .pipe(concat('main.min.scss'))
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
-    .pipe(px2rem())
+    // .pipe(px2rem())
     .pipe(gulpif(env === 'prod',
       autoprefixer({
         overrideBrowserslist: ["last 2 versions"],
@@ -110,7 +114,7 @@ task('server', () => {
 
 task('watch', () => {
   watch(`./${SRC_PATH}/styles/**/*`, series('styles'))
-  watch(`./${SRC_PATH}/*.html`, series('copy:html'))
+  watch(`./${SRC_PATH}/**/*.html`, series('copy:html'))
   watch(`./${SRC_PATH}/scripts/*`, series('scripts'))
   watch(`./${SRC_PATH}/images/icons/*.svg`, series('icons'))
   watch([`./${SRC_PATH}/images/*.png`, `./${SRC_PATH}/images/*.svg`], series('images'))

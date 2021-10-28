@@ -1,0 +1,47 @@
+.menu {
+  display: flex;
+  font-size: 14px;
+}
+
+.menu__toggle {
+  display: none;
+}
+
+.menu__dropdown {
+  /*  */
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+}
+
+.menu__item {
+  /*  */
+}
+
+.menu__item + .menu__item {
+  margin-left: 50px;
+}
+
+.menu__link {
+  position: relative;
+  display: inline-block;
+  padding: 32px 8px 30px;
+  text-decoration: none;
+  @include jost(medium);
+  text-transform: uppercase;
+  color: $black;
+}
+
+.menu__item:hover .menu__link::after,
+.menu__item--active .menu__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  height: 3px;
+  background-color: $blue;
+}
