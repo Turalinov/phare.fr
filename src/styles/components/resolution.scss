@@ -1,12 +1,14 @@
 .resolution{
-  padding: 200px 0 70px;
+  padding: 200px 0 90px;
   text-align: center;
 }
-.resolution__title{
-  //
+.resolution__title {
+  margin-top: 10px;
 }
 .resolution__text{
-  //
+  @include jost(medium);
+  font-size: 20px;
+  margin-bottom: 29px;
 }
 .resolution__btn{
   //
