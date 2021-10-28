@@ -1,0 +1,41 @@
+.scheme {
+  position: relative;
+}
+
+.sheme__lines {
+
+
+  & img {
+    margin: 0 auto;
+  }
+}
+
+.scheme__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -211px;
+}
+
+.scheme__item {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 13px 60px;
+  @include jost(medium);
+  font-size: 24px;
+  line-height: 2.2;
+  background-color: $white;
+  box-shadow: 0px 15px 40px rgba(55, 68, 131, 0.05);
+}
+
+.scheme__item--dotted {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 190px;
+  height: 190px;
+  font-size: 38px;
+  line-height: 1.2;
+  color: $blue;
+}
