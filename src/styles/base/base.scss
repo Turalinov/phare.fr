@@ -71,13 +71,13 @@ h1 {
   @include jost(semibold);
   text-transform: uppercase;
 
-  // @include tablets {
-  //   font-size: rem(24px);
-  // }
+  @include tablets {
+    font-size: 45px;
+  }
 
-  // @include phones {
-  //   font-size: rem(18px);
-  // }
+  @include phones {
+    font-size: 25px;
+  }
 }
 
 h2 {

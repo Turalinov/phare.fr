@@ -1,0 +1,74 @@
+.facts {
+}
+
+.facts__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.facts__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.facts__item +.facts__item {
+  margin-left: 170px;
+  position: relative;
+
+  @include phones {
+    margin-left: 0;
+    margin-top: 40px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -85px;
+    width: 1px;
+    height: 100%;
+    background-color: $black;
+    opacity: 0.2;
+
+    @include phones {
+      left: 50%;
+      transform: translateX(-50%);
+      top: -20px;
+      width: 132px;
+      height: 0.7px;
+    }
+  }
+}
+
+.facts__accent {
+  font-size: 35px;
+  @include jost(medium);
+
+  @include phones {
+    font-size: 30px;
+  }
+}
+
+.facts__something {
+  font-size: 18px;
+
+  @include phones {
+    font-size: 16px;
+  }
+}
+
+.facts__something + .facts__something {
+
+}
+
+.facts__more {
+  margin-left: 5px;
+  color: $green;
+  @include jost(bold);
+}

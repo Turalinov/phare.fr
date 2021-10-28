@@ -3,10 +3,14 @@
 }
 
 .sheme__lines {
-
-
   & img {
     margin: 0 auto;
+
+    @include phones {
+      width: 237px;
+      height: 107px;
+      transform: rotate(90deg);
+    }
   }
 }
 
@@ -15,9 +19,16 @@
   align-items: center;
   justify-content: space-between;
   margin-top: -211px;
+
+  @include phones {
+    flex-direction: column;
+    margin-top: -211px;
+
+  }
 }
 
 .scheme__item {
+  position: relative;
   display: inline-block;
   border-radius: 10px;
   padding: 13px 60px;
@@ -26,6 +37,16 @@
   line-height: 2.2;
   background-color: $white;
   box-shadow: 0px 15px 40px rgba(55, 68, 131, 0.05);
+
+  @include tablets {
+    font-size: 18px;
+  }
+
+  @include phones {
+    padding: 6px 26px;
+    font-size: 14px;
+  }
+
 }
 
 .scheme__item--dotted {
@@ -38,4 +59,37 @@
   font-size: 38px;
   line-height: 1.2;
   color: $blue;
+
+  @include tablets {
+    font-size: 30px;
+  }
+
+  @include phones {
+    font-size: 20px;
+    width: 102px;
+    height: 102px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 134px;
+    height: 134px;
+    background-color: $blue;
+    opacity: 0.3;
+    filter: blur(110px);
+
+    @include phones {
+      width: 72px;
+      height: 72px;
+    }
+  }
+}
+
+.scheme__item + .scheme__item {
+  @include phones {
+    margin-top: 62px;
+  }
 }

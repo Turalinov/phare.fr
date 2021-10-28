@@ -1,15 +1,61 @@
 .resolution{
   padding: 200px 0 90px;
   text-align: center;
+
+  @include phones {
+    padding-bottom: 30px;
+  }
+
+  & .container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .resolution__title {
   margin-top: 10px;
+  margin-bottom: 22px;
+
+  @include phones {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  & span {
+    border-bottom: 3px solid $blue;
+  }
+
 }
 .resolution__text{
   @include jost(medium);
   font-size: 20px;
   margin-bottom: 29px;
+
+  @include tablets {
+    font-size: 18px;
+  }
+
+  @include phones {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
 }
-.resolution__btn{
+.resolution__btn-wrap{
   margin-bottom: 140px;
+
+  @include phones {
+    margin-bottom: 40px;
+  }
+}
+
+.resolution__scheme {
+  margin-bottom: 125px;
+
+  @include phones {
+    order: -1;
+    margin-bottom: 40px;
+  }
+}
+
+.resolution__facts {
+
 }

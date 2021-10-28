@@ -12,6 +12,10 @@
   @if $style == semibold {
     font-weight: 600;
   }
+
+  @if $style == bold {
+    font-weight: 700;
+  }
 }
 
 @mixin tablets() {
