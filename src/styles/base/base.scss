@@ -86,6 +86,13 @@ h2 {
   @include jost(semibold);
   font-size: 40px;
   text-transform: uppercase;
+
+  @include tablets {
+    font-size: 30px;
+  }
+  @include phones {
+    font-size: 20px;
+  }
 }
 
 h3 {
@@ -97,7 +104,7 @@ h3 {
   }
 
   @include phones {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
