@@ -54,6 +54,9 @@ select {
   // }
 }
 
+a {
+  text-decoration: none;
+}
 
 h1,
 h2,
@@ -63,12 +66,11 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-  font-weight: 400;
 }
 
 h1 {
-  font-size: 55px;
   @include jost(semibold);
+  font-size: 55px;
   text-transform: uppercase;
 
   @include tablets {
@@ -81,27 +83,22 @@ h1 {
 }
 
 h2 {
-  // font-size: rem(36px);
-  // @include regular;
-  // text-transform: uppercase;
-
-  // @include tablets {
-  //   font-size: rem(24px);
-  // }
-
+  @include jost(semibold);
+  font-size: 40px;
+  text-transform: uppercase;
 }
 
 h3 {
-  // font-size: rem(24px);
-  // font-weight: 600;
+  @include jost(medium);
+  font-size: 20px;
 
-  // @include tablets {
-  //   font-size: rem(22px);
-  // }
+  @include tablets {
+    font-size: 18px;
+  }
 
-  // @include phones {
-  //   font-size: rem(18px);
-  // }
+  @include phones {
+    font-size: 14px;
+  }
 }
 
 h4 {
@@ -145,4 +142,8 @@ img {
 
 .wrapper__content {
   flex: 1;
+}
+
+.dot {
+  color: $green;
 }

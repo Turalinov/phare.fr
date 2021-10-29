@@ -1,0 +1,148 @@
+.hsm {
+  padding: 90px 0px;
+}
+.hsm__wrapper {
+  display: flex;
+  flex: 1;
+}
+.hsm__content {
+  //
+}
+.hsm__graph {
+  display: none;
+}
+
+.hsm__title {
+  margin-bottom: 50px;
+
+  & span:first-child {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: $blue;
+
+      @include phones {
+        height: 1.5px;
+      }
+    }
+  }
+}
+
+.hsm__list {
+  margin-bottom: 45px;
+}
+.hsm__item {
+  position: relative;
+  max-width: 355px;
+  margin-left: 30px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url("images/rhombus.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: -21px;
+    top: 10px;
+    width: 9px;
+    height: 9px;
+  }
+}
+
+.hsm__item+.hsm__item {
+  margin-top: 27px;
+}
+.hsm__name {
+  margin-bottom: 13px;
+}
+.hsm__desc {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.hsm__link {
+  @include jost(medium);
+  color: $blue;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    margin-left: 5px;
+    background-image: url("images/arrow-right.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 8px;
+  }
+}
+
+.hsm__btn {
+  //
+}
+
+.hsm__leaves,
+.hsm__peoples {
+  fill: $icons-color;
+  width: 65px;
+  height: 65px;
+}
+
+.hsm__woman,
+.hsm__woman2,
+.hsm__man {
+  width: 55px;
+  height: 55px;
+}
+
+.hsm__graph1 {
+  width: 357px;
+}
+
+.hsm__trained {
+  width: 152px;
+}
+
+.hsm__graph2 {
+  width: 183px;
+}
+
+.hsm__document {
+  width: 206px;
+}
+
+.hsm__woman2 {
+}
+
+.hsm__peoples {
+  //
+}
+
+.hsm__graph3 {
+  width: 226px;
+}
+
+.hsm__check {
+  //
+}
+
+.hsm__graph4 {
+  width: 199px;
+}
+
+.hsm__graph5 {
+  width: 209px;
+}
+
+.hsm__home {
+  //
+}
