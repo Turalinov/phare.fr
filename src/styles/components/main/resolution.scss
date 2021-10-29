@@ -55,18 +55,10 @@
 
 .resolution__text{
   margin-bottom: 29px;
-  @include jost(medium);
-  font-size: 20px;
-
-  @include tablets {
-    font-size: 18px;
-  }
 
   @include phones {
-    font-size: 14px;
     margin-bottom: 20px;
   }
-
 }
 
 .resolution__btn-wrap{

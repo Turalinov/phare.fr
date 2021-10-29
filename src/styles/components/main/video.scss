@@ -1,0 +1,114 @@
+.video {
+  height: 630px;
+}
+
+.video__wrap {
+  position: relative;
+  border-radius: 10px;
+  background: linear-gradient(305.75deg, #d9d9d9 21.17%, rgba(255, 255, 255, 0) 81.12%);
+
+  @include phones {
+    width: 278px;
+    margin: 0 auto;
+  }
+}
+
+// .video .video__player {
+//   width: 100%;
+//   height: 100%;
+// }
+
+.video__preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 65px 100px 65px 224px;
+
+  @include tablets {
+    padding: 35px 70px 35px 94px;
+  }
+
+  @include phones {
+    padding: 26px 22px 22px 26px;
+  }
+}
+
+.video__title {
+  @include jost(semibold);
+  font-size: 70px;
+  color: $blue;
+
+  @include tablets {
+    font-size: 50px;
+  }
+
+  @include phones {
+    font-size: 20px;
+  }
+}
+
+.video__img-wrap {
+  margin-left: 80px;
+  width: 602px;
+
+  @include tablets {
+    width: 472px;
+  }
+
+  @include phones {
+    margin-left: 0;
+    width: 141px;
+  }
+}
+
+.video__img {
+
+}
+
+.video__btn {
+  position: absolute;
+  border-radius: 50%;
+  width: 136px;
+  height: 136px;
+  background-color: $white;
+  box-shadow: 0px 20px 60px rgba(124, 136, 190, 0.15);
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include tablets {
+    width: 100px;
+    height: 100px;
+  }
+
+  @include phones {
+    width: 62px;
+    height: 62px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-image: url("images/play.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include tablets {
+      width: 26px;
+      height: 26px;
+    }
+
+    @include phones {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

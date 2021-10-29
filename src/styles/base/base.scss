@@ -154,3 +154,17 @@ img {
 .dot {
   color: $green;
 }
+
+.subtitle {
+  @include jost(medium);
+  font-size: 20px;
+
+  @include tablets {
+    font-size: 18px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+
+}

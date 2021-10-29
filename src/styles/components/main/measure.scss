@@ -1,0 +1,39 @@
+.measure {
+  padding: 90px 0px 60px;
+
+  @include phones {
+    padding: 30px 0px;
+  }
+}
+
+.measure .container {
+  max-width: 1380px;
+  padding: 0 30px;
+
+  @include phones {
+    padding: 0 20px;
+  }
+}
+
+.measure__title {
+  text-align: center;
+  margin-bottom: 9px;
+
+  @include phones {
+    margin-bottom: 7px;
+  }
+}
+
+.measure__text {
+  text-align: center;
+  margin-bottom: 50px;
+
+  @include phones {
+    margin-bottom: 30px;
+  }
+}
+
+.measure__video {
+  //
+}
+
