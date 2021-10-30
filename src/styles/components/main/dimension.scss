@@ -1,0 +1,25 @@
+.dimension {
+  padding: 80px 0;
+  text-align: center;
+}
+.dimension__title {
+  margin-bottom: 20px;
+
+  @include phones {
+    max-width: 227px;
+    margin: 0 auto 15px;
+  }
+}
+.dimension__text {
+  font-size: 18px;
+  margin-bottom: 30px;
+
+  @include phones {
+    max-width: 247px;
+    margin: 0 auto 22px;
+    font-size: 12px;
+  }
+}
+.dimension__btn {
+  width: 100%;
+}

@@ -16,6 +16,10 @@ button {
   background-color: $blue;
   @include jost(medium);
 
+  @include phones {
+    font-size: 14px;
+  }
+
   // @include tablets {
   //   font-size: rem(16px);
   //   padding: rem(9px) rem(32px);
