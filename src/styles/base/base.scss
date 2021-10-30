@@ -132,6 +132,10 @@ h5 {
 
 p {
   margin: 0;
+
+  @include phones {
+    font-size: 14px;
+  }
 }
 
 img {

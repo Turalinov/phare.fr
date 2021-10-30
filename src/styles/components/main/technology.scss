@@ -1,0 +1,229 @@
+.technology {
+  padding: 80px 0 90px;
+
+  @include phones {
+    padding: 30px 0px;
+  }
+
+  & .container {
+    display: flex;
+    justify-content: start;
+
+    @include phones {
+      flex-direction: column;
+    }
+
+  }
+}
+
+.technology__wrap {
+  flex-basis: 524px;
+
+  @include phones {
+    flex-basis: initial;
+    width: 100%;
+  }
+}
+
+.technology__preview {
+  position: relative;
+  width: 100%;
+  height: 583px;
+  background: url("images/technology-bg.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include phones {
+    height: 307px;
+  }
+}
+
+.technology__bg {
+  position: absolute;
+}
+
+.technology__people {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+
+  @include phones {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.technology__people1 {
+  left: 6%;
+  top: 26%;
+}
+
+.technology__people2 {
+  left: 63%;
+  top: 6%;
+}
+
+.technology__people3 {
+  left: 18%;
+  top: 76%;
+}
+
+.technology__people4 {
+  left: 74%;
+  top: 57%;
+}
+
+.technology__info {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  width: 206px;
+  height: 206px;
+  color: $white;
+  transform: translate(-50%, -50%);
+
+  @include phones {
+    width: 140px;
+    height: 140px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: 206px;
+    height: 206px;
+    background-color: #000;
+    opacity: 0.5;
+    filter: blur(120px);
+  }
+}
+
+.technology__info-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.techology__info-title {
+  @include jost(semibold);
+  font-size: 55px;
+  line-height: 1.2;
+
+  @include phones {
+    font-size: 38px;
+  }
+}
+
+.technology__info-desc {
+  font-size: 12px;
+  text-align: center;
+
+  @include phones {
+    font-size: 10px;
+  }
+}
+
+.technology__content {
+  max-width: 446px;
+  margin-top: 27px;
+  margin-left: 105px;
+
+  @include phones {
+    max-width: initial;
+    margin-top: 30px;
+    margin-left: 0;
+  }
+}
+
+.technology__title {
+  margin-bottom: 33px;
+
+  @include phones {
+    margin-bottom: 20px;
+  }
+}
+
+.technology__desc-wrap{
+  margin-bottom: 55px;
+
+  @include phones {
+    font-size: 14px;
+  }
+}
+
+.technology__desc {
+  @include jost(semibold);
+  margin-bottom: 20px;
+}
+
+.technology__subtitle {
+  @include jost(semibold);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+
+  @include phones {
+    margin-bottom: 20px;
+  }
+}
+
+.technology__links {
+  margin-top: 30px;
+  display: flex;
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.technology__link {
+  @include jost(semibold);
+  padding: 14px 21px 12px 20px;
+  background-color: $white;
+  width: 193px;
+  border-radius: 5px;
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.technology__link+.technology__link {
+  margin-left: 20px;
+
+  @include phones {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}
+
+.technology__link-title {
+}
+
+.technology__link-text {
+  display: block;
+  position: relative;
+  font-size: 12px;
+  color: $blue;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display:block;
+    background-image: url(images/arrow-right-lg.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 8px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
