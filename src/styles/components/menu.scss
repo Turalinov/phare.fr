@@ -78,17 +78,38 @@
 }
 
 .menu__dropdown {
+  display: flex;
+  align-items: center;
+  column-gap: 200px;
+
+  @include tablets {
+    column-gap: 40px;
+  }
+
   @include phones {
+    flex-direction: column;
     position: fixed;
     left: 0;
     right: 0;
-    top: -120%;
+    top: -150%;
+    height: 100%;
     z-index: $z-index-menu-dropdown;
     overflow: auto;
-    padding-top: 50px;
-    height: 100%;
+    padding: 80px 20px 30px;
     background-color: $white;
     transition: all 1s ease;
+  }
+  &::before {
+    @include phones {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: #000;
+      opacity: 0.1;
+    }
   }
 }
 
@@ -98,11 +119,29 @@
 
   @include phones() {
     flex-direction: column;
+    margin-bottom: 55px;
   }
 }
 
 .menu__item {
-  /*  */
+  @include phones {
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+
+  &::before {
+    @include phones {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: #000;
+      opacity: 0.1;
+    }
+  }
 }
 
 .menu__item + .menu__item {
@@ -125,6 +164,17 @@
   @include jost(medium);
   text-transform: uppercase;
   color: $black;
+
+  @include phones {
+    width: 100%;
+    padding: 20px 0;
+  }
+}
+
+.menu__item:hover::before,
+.menu__item--active::before {
+  opacity: 1;
+  background-color: $blue;
 }
 
 .menu__item:hover .menu__link::after,
@@ -137,4 +187,41 @@
   display: block;
   height: 3px;
   background-color: $blue;
+
+  @include phones {
+    display: none;
+  }
+}
+
+.menu__socials {
+  display: none;
+
+  @include phones {
+    display: flex;
+    justify-content: center;
+    order: 30;
+  }
+}
+
+.menu__btns {
+  display: flex;
+  @include phones {
+    order: 20;
+    margin-bottom: 30px;
+  }
+}
+
+.menu__btn {
+  padding: 9px 20px;
+  font-size: 12px;
+}
+
+.menu__btn+.menu__btn {
+  margin-left: 15px;
+}
+
+.menu__btn--bordered {
+  border-color: $blue;
+  color: $blue;
+  background-color: $white;
 }

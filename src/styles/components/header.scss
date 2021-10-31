@@ -16,26 +16,3 @@
     justify-content: space-between;
   }
 }
-
-.header__btns {
-  display: flex;
-
-  @include phones {
-    display: none;
-  }
-}
-
-.header__btn {
-  padding: 9px 20px;
-  font-size: 12px;
-}
-
-.header__btn + .header__btn {
-  margin-left: 15px;
-}
-
-.header__btn--bordered {
-  border-color: $blue;
-  color: $blue;
-  background-color: $white;
-}

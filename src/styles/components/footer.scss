@@ -110,7 +110,10 @@
   justify-content: space-between;
 
   @include phones {
+    justify-content: initial;
     flex-wrap: wrap;
+    column-gap: 55px;
+    row-gap: 20px;
   }
 }
 
@@ -128,6 +131,7 @@
   }
 
   @include phones {
+    margin-right: 10px;
     margin-left: 0;
   }
 }
@@ -179,6 +183,6 @@
 }
 
 .footer__support {
-  //
+  color: #555555;
 }
 
