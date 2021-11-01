@@ -1,0 +1,63 @@
+.accordion {
+  //
+}
+.accordion__item {
+  border-bottom: 1px solid #d9d9d9;
+}
+.accordion__control {
+  padding: 28px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  @include phones {
+    padding: 20px 0;
+  }
+}
+.accordion__title {
+  @include jost(medium);
+  text-align: left;
+
+  @include phones {
+    font-size: 14px;
+    max-width: 90%;
+  }
+}
+.accordion__icon {
+  stroke: $blue;
+  fill: $blue;
+  width: 20px;
+  height: 20px;
+  stroke-width: 2px;
+  transition: all 0.3s ease-out;
+}
+
+.open .accordion__icon {
+  transform: rotate(45deg);
+}
+
+.accordion__content {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+  will-change: max-height;
+  transition: all 0.3s ease-out;
+  box-sizing: content-box;
+}
+
+.open .accordion__content {
+  opacity: 1;
+  padding-bottom: 25px;
+}
+
+.accordion__content p {
+  font-size: 14px;
+
+  @include phones {
+    font-size: 12px;
+  }
+}
+.accordion__content > p + p {
+  margin-top: 20px;
+}

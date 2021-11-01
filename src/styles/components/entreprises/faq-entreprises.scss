@@ -1,0 +1,22 @@
+
+.faq-entreprises {
+  padding: 80px 0;
+
+  @include phones {
+    padding: 30px 0;
+  }
+}
+
+.faq-entreprises__title {
+  text-align: center;
+  margin-bottom: 70px;
+
+  @include phones {
+    margin-bottom: 30px;
+  }
+}
+
+.faq-entreprises__list {
+  max-width: 734px;
+  margin: 0 auto;
+}
