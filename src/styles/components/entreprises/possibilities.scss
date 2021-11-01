@@ -1,0 +1,15 @@
+.possibilities {
+  padding: 80px 0;
+
+  @include phones {
+    padding: 30px 0;
+  }
+}
+
+.possibilities_title {
+  text-align: center;
+  margin-bottom: 70px;
+  @include phones {
+    margin-bottom: 20px;
+  }
+}

@@ -109,16 +109,14 @@ h3 {
 }
 
 h4 {
-  // font-size: rem(22px);
-  // font-weight: 500;
+  @include jost(medium);
+  font-size: 25px;
+  line-height: 1.6;
 
-  // @include tablets {
-  //   font-size: rem(22px);
-  // }
+  @include phones {
+    font-size: 20px;
+  }
 
-  // @include phones {
-  //   font-size: rem(16px);
-  // }
 }
 
 h5 {
