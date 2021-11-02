@@ -1,0 +1,132 @@
+.opinion {
+  padding: 90px 0;
+
+  @include tablets {
+    padding: 40px 0;
+  }
+
+  @include phones {
+    padding: 30px 0;
+  }
+}
+
+.opinion__wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+
+  @include phones {
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.opinion__content,
+.opinion__images {
+}
+
+.opinion__content {
+  max-width: 457px;
+
+  @include phones {
+    max-width: 100%;
+  }
+}
+
+.opinion__title {
+  margin-bottom: 30px;
+
+  @include phones {
+    margin-bottom: 15px;
+  }
+}
+
+.opinion__text {
+  font-size: 20px;
+
+  @include tablets {
+    font-size: 18px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+}
+.opinion__text>p + p {
+  margin-top: 20px;
+}
+.opinion__text p span {
+  @include jost(medium);
+}
+
+.opinion__images {
+  position: relative;
+  width: 247px;
+  height: 371px;
+
+  @include phones {
+    width: 187px;
+    height: 283px;
+    margin-bottom: 50px;
+  }
+
+}
+
+.opinion__kpi-small,
+.opinion__kpi-large,
+.opinion__kpi-big {
+  position: absolute;
+  box-shadow: 0 19px 49px rgba(124, 136, 190, 0.1);
+  border-radius: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.opinion__kpi-small {
+  width: 187px;
+  height: 266px;
+  top: 10px;
+
+  @include phones {
+    width: 142px;
+    height: 203px;
+  }
+}
+.opinion__kpi-large {
+  width: 225px;
+  height: 320px;
+  top: 20px;
+
+  @include phones {
+    width: 171px;
+    height: 244px;
+  }
+}
+
+.opinion__kpi-big {
+  width: 245px;
+  height: 348px;
+  top: 30px;
+
+  @include phones {
+    width: 187px;
+    height: 256px;
+  }
+}
+
+.opinion__report {
+  position: absolute;
+  left: 150px;
+  top: 210px;
+
+  @include tablets {
+    left: -20px;
+    top: initial;
+    bottom: -30px;
+  }
+
+  @include phones {
+    bottom: 0px;
+  }
+}

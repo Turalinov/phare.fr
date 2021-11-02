@@ -1,0 +1,51 @@
+.report {
+  padding: 20px 17px;
+  background: $white;
+  box-shadow: 0 19px 49px rgba(124, 136, 190, 0.15);
+  border-radius: 3px;
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include phones {
+    width: 187px;
+    padding: 17px 14px;
+  }
+}
+
+.report__preview {
+  width: 29px;
+  height: 30px;
+
+  @include phones {
+    width: 24px;
+    height: 25px;
+  }
+}
+
+.report__content {
+  //
+}
+
+.report__title {
+  font-size: 14px;
+
+  @include phones {
+    font-size: 12px;
+  }
+}
+
+.report__desc {
+  color: #78818A;
+  font-size: 10px;
+
+  @include phones {
+    font-size: 9px;
+  }
+}
+
+.report__download {
+  width: 27px;
+  height: 28px;
+}
