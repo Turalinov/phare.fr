@@ -1,0 +1,19 @@
+.employer {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px 10px;
+  background-color: #fff;
+  box-shadow: 0px 10px 27px rgba(124, 136, 190, 0.15);
+  border-radius: 2px;
+}
+
+.employer__icon {
+  width: 16px;
+  height: 17px;
+  margin-right: 11px;
+}
+
+.employer__text {
+  @include jost(medium);
+  font-size: 14px;
+}

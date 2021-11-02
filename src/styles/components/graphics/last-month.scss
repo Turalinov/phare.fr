@@ -1,0 +1,28 @@
+.last-month {
+  display: inline-flex;
+  max-width: 175px;
+  padding: 9px 15px;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 10px 27px rgba(124, 136, 190, 0.15);
+  border-radius: 2px;
+
+  font-size: 12px;
+}
+
+.last-month__arrow {
+  fill: #6BB554;
+  height: 8px;
+  width: 8px;
+  margin-right: 6px;
+}
+
+.last-month__percent {
+  color: #6BB554;
+  margin-right: 6px;
+}
+
+.last-month__text {
+  @include jost(medium);
+  opacity: 0.5;
+}

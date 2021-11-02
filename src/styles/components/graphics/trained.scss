@@ -1,0 +1,58 @@
+.trained {
+  background: $white;
+  box-shadow: 0px 7px 18px rgba(124, 136, 190, 0.15);
+  border-radius: 1px;
+  padding: 6px 10px 6px 6px;
+  max-width: 152px;
+  display: flex;
+}
+.trained__preview {
+  padding: 12px 14px;
+  background-color: #F6F7F9;
+  max-width: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 9px;
+}
+.trained__icon {
+  fill: #6B7885;
+  width: 16px;
+  height: 16px;
+}
+
+.trained__content {
+  //
+}
+
+.trained__title {
+  font-size: 7px;
+  @include jost(semibold);
+}
+
+.trained__number {
+  font-size: 15px;
+}
+
+.trained__top {
+  display: flex;
+  align-items: center;
+  font-size: 6px;
+}
+
+.trained__arrow {
+  fill: #6BB554;
+  height: 4px;
+  width: 4px;
+  margin-right: 2px;
+}
+
+.trained__percent {
+  color: #6BB554;
+  margin-right: 2px;
+}
+
+.trained__text {
+  @include jost(medium);
+  opacity: 0.5;
+}
