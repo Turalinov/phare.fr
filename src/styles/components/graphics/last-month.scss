@@ -8,6 +8,13 @@
   border-radius: 2px;
 
   font-size: 12px;
+
+  @include phones {
+    padding: 5px 8px;
+    max-width: initial;
+    font-size: 6px;
+    width: 92px;
+  }
 }
 
 .last-month__arrow {
@@ -15,11 +22,21 @@
   height: 8px;
   width: 8px;
   margin-right: 6px;
+
+  @include phones {
+    height: 4px;
+    width: 4px;
+    margin-right: 3px;
+  }
 }
 
 .last-month__percent {
   color: #6BB554;
   margin-right: 6px;
+
+  @include phones {
+    margin-right: 3px;
+  }
 }
 
 .last-month__text {

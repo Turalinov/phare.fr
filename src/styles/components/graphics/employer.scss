@@ -5,15 +5,29 @@
   background-color: #fff;
   box-shadow: 0px 10px 27px rgba(124, 136, 190, 0.15);
   border-radius: 2px;
+
+  @include phones {
+    padding: 4px 7px 5px;
+  }
 }
 
 .employer__icon {
   width: 16px;
   height: 17px;
   margin-right: 11px;
+
+  @include phones {
+    width: 7px;
+    height: 8px;
+    margin-right: 4px;
+  }
 }
 
 .employer__text {
   @include jost(medium);
   font-size: 14px;
+
+  @include phones {
+    font-size: 6px;
+  }
 }
