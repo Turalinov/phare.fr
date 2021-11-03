@@ -1,0 +1,25 @@
+.flourish {
+  padding: 80px 0;
+
+  @include phones {
+    padding: 30px 0;
+  }
+}
+
+.flourish__title {
+  text-align: center;
+  margin-bottom: 70px;
+
+  @include phones {
+    margin-bottom: 20px;
+  }
+}
+
+.flourish__tabs {
+  max-width: 736px;
+  margin: 0 auto;
+
+  @include phones {
+    max-width: initial;
+  }
+}

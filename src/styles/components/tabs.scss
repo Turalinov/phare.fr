@@ -1,0 +1,85 @@
+.tabs {
+
+}
+
+.tabs__list {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+
+  @include phones {
+    overflow-x: auto;
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #C5C5C5;
+  }
+}
+.tabs__item {
+}
+
+.tabs__btn {
+  @include jost(medium);
+  position: relative;
+  padding: 8px 16px 23px 16px;
+
+  @include phones {
+    font-size: 14px;
+    padding: 5px 15px 13px 15px;
+  }
+}
+
+.tabs__btn--active,
+.tabs__btn:hover {
+  color: $green;
+}
+
+.tabs__btn:hover::after,
+.tabs__btn--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  height: 2px;
+  background-color: $green;
+}
+
+
+.tabs__content {
+  display: none;
+  padding: 70px 0 20px;
+
+  @include phones {
+    padding: 35px 0 15px;
+  }
+}
+
+.tabs__content .content {
+  font-size: 18px;
+  text-align: center;
+  max-width: 535px;
+  margin: 0 auto;
+
+  @include tablets {
+    font-size: 16px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+}
+
+
+.tabs__content--active {
+  display: block;
+}
