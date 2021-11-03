@@ -93,7 +93,13 @@
   position: absolute;
   width: 822px;
   height: 531px;
-  left: 40%;
+  left: 50%;
+  transform: translateX(-180px);
+
+  @include tablets {
+    transform: none;
+    left: 40%;
+  }
 
   @include phones {
     position: relative;
