@@ -191,7 +191,7 @@
   top: 67px;
 
   @include phones {
-    transform: scale(1);
+    transform: scale(.5);
     left: 58px;
     top: 17px;
   }
