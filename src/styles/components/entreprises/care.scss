@@ -10,7 +10,7 @@
   & .container {
     display: flex;
 
-    @include tablets {
+    @include phones {
       flex-direction: column-reverse;
     }
   }
@@ -60,15 +60,15 @@
   @include jost(semibold);
 }
 
-.btn__care {
-  //
+.care__btn {
+  @include jost();
 }
 
 .care__devices {
   position: absolute;
   width: 702px;
   height: 397px;
-  left: calc(50%);
+  left: 50%;
 
   @include tablets {
     left: 60%;
@@ -98,13 +98,16 @@
 
 .care__phone {
   position: absolute;
-  left: -25px;
-  top: 15%;
-  width: 181px;
-  height: 304px;
+  left: -3px;
+  top: 20%;
+  width: 133px;
+  height: 256px;
+  box-shadow: 0 9px 23px rgba(124, 136, 190, 0.15);
 
   @include phones {
-    width: 95px;
-    height: 158px;
+    left: 9px;
+    top: 10px;
+    width: 69px;
+    height: 133px;
   }
 }

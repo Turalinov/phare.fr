@@ -1,0 +1,190 @@
+.staff {
+  position: relative;
+  padding: 200px 0 156px;
+
+  @include tablets {
+    padding: 150px 0 206px;
+  }
+
+  @include phones {
+    padding: 85px 0 30px;
+    text-align: center;
+  }
+
+  & .container {
+    display: flex;
+
+    @include phones {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.staff__content {
+  max-width: 362px;
+
+  @include phones {
+    min-width: initial;
+    margin: 0 auto;
+  }
+}
+
+.staff__title {
+  font-size: 50px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+
+  @include tablets {
+    font-size: 40px;
+  }
+
+  @include phones {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+}
+
+.staff__desc {
+  @include jost(semibold);
+  font-size: 18px;
+  margin-bottom: 27px;
+
+  @include tablets {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+}
+
+.staff__info {
+  margin-bottom: 30px;
+
+  @include phones {
+    margin-bottom: 20px;
+  }
+}
+
+.staff__info p {
+  @include tablets {
+    font-size: 14px;
+  }
+
+  @include phones {
+    font-size: 12px;
+  }
+}
+
+.staff__info>p+p {
+  margin-top: 20px;
+}
+
+.staff__btn {
+  @include jost();
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.staff__devices {
+  position: absolute;
+  width: 822px;
+  height: 531px;
+  left: 40%;
+
+  @include phones {
+    position: relative;
+    left: initial;
+    width: 187px;
+    height: 200px;
+    margin: 0 auto 25px;
+  }
+}
+
+.staff__macbook {
+  position: absolute;
+  width: 810px;
+  height: 496px;
+  right: 0;
+  bottom: 0;
+
+  @include phones {
+    display: none;
+  }
+}
+
+.staff__phone {
+  position: absolute;
+  top: 10px;
+  left: 91px;
+  width: 222px;
+  height: 406px;
+
+  @include phones {
+    width: 111px;
+    height: 203px;
+    left: 57px;
+  }
+}
+
+.staff__people {
+  position: absolute;
+  top: 8px;
+  left: 83px;
+  width: 66px;
+  height: 66px;
+
+  @include phones {
+    width: 42px;
+    height: 42px;
+    left: 45px;
+  }
+}
+
+.staff__dialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+.staff__dialog-content {
+  text-align: left;
+  @include jost(medium);
+  margin-right: 7px;
+
+
+  @include phones {
+    margin-right: 4px;
+  }
+}
+
+.staff__dialog-top {
+  font-size: 9px;
+  opacity: 0.4;
+
+  @include phones {
+    font-size: 6px;
+  }
+}
+
+.staff__dialog-bottom {
+  font-size: 11px;
+
+  @include phones {
+    font-size: 7px;
+  }
+}
+
+.staff__dialog-icon {
+  width: 27px;
+  height: 27px;
+
+  @include phones {
+    width: 17px;
+    height: 17px;
+  }
+}
