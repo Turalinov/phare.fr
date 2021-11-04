@@ -1,5 +1,5 @@
 (function() {
-  console.log(1);
+  console.log('menu');
   const menuToggle = document.querySelector('.menu__toggle');
   const menu = document.querySelector('.menu');
   const body = document.querySelector('body')

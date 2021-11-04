@@ -1,17 +1,17 @@
-(function() {
-//Инициализируем слайдер
-  console.log('ribbon-slider');
-new Swiper('.ribbon-slider', {
+(function () {
+    //Инициализируем слайдер
+  console.log('promote-slider');
+new Swiper('.promote-slider', {
   //Стрелки
-  // navigation: {
-  //   nextEl: '.swiper-button-next', //тут можем задать свои - в одних из блоков будут
-  //   prevEl: '.swiper-button-prev',
-  // },
+  navigation: {
+    nextEl: '.promote-slider__button-next', //тут можем задать свои - в одних из блоков будут
+    prevEl: '.promote-slider__button-prev',
+  },
   //Навигация
 
   // Буллеты, текущее положение, прогрессбар
-  // pagination: {
-  //   el: '.swiper-pagination',
+  pagination: {
+    el: '.promote-slider__pagination',
 
 
     // // 1 тип: буллеты
@@ -25,7 +25,7 @@ new Swiper('.ribbon-slider', {
     // }
 
     //2 тип. фракция
-    // type: 'fraction',
+    type: 'fraction',
     //кастомный вывод фракции
     // renderFraction: function (currentClass, totalClass) {
     //   return 'Слайдер <span class="' + currentClass + '"></span>' + ' из ' + '<span class="' + totalClass + '"></span>';
@@ -34,7 +34,7 @@ new Swiper('.ribbon-slider', {
     //3 тип. прогрессбар сверху
     // type: 'progressbar',
 
-  // },
+  },
 
   //скролл
   // scrollbar: {
@@ -45,14 +45,14 @@ new Swiper('.ribbon-slider', {
 
   //свайпы
   //включение / отключение перетаскивания на ПК
-  simulateTouch: true, //false если нужно отключить
+  // simulateTouch: true, //false если нужно отключить
 
   //чувствительность свайпа
   // touchRatio: 1, //0 - отлючает свайпы везде
   //угол срабатывания свайпа
   // touchAngle: 45,
   //курсор перетаскивания
-  grabCursor: true,
+  // grabCursor: true,
   //переключение слайда при клике на него
   // slideToClickedSlide: true,
 
@@ -99,13 +99,13 @@ new Swiper('.ribbon-slider', {
   centeredSlides: true,
 
   //стартовый слайд
-  initialSlide: 3, //отсчёт с  0
+  // initialSlide: 0, //отсчёт с  0
 
   //мультирядность
   // slidesPerColumn: 2, //для корректной работы отключить автовысоту а также слайдеру задать height: 700 и сами слайдам height: calc((100% - 30px) /2); overflow:hidden;
 
   //бесконечный слайдер
-  loop: true,
+  // loop: true,
 
   //количество дублирующих слайдов для бесконечного слайдера если slidesPerView больше 1
   // loopedSlides: 3,
@@ -120,7 +120,7 @@ new Swiper('.ribbon-slider', {
     //закончить на последнем слайде если отключена бесконечный
     // stopOnLastSlide: false,
     //отключить после ручного переключения
-    disableOnInteraction: false,
+    // disableOnInteraction: false,
 
   },
 
@@ -132,13 +132,13 @@ new Swiper('.ribbon-slider', {
 
   //эффекты переключения слайдов
   //смена прозрачности
-  // effect: 'fade',
+  effect: 'fade',
 
-  // //дополнительно к fade
-  // fadeEffect: {
-  //   //параллельная смена прозрачности
-  //   crossFade: true
-  // },
+  //дополнительно к fade
+  fadeEffect: {
+    //параллельная смена прозрачности
+    crossFade: true
+  },
 
     //эффекты переключения слайдов
   //смена прозрачности
@@ -184,7 +184,7 @@ new Swiper('.ribbon-slider', {
 
   //эффекты переключения слайдов
   //стандартный эффект листание
-  effect: 'slide',
+  // effect: 'slide',
 
   //брекпоинты (adaptive MOBILE FIRST)
   //ширина экрана
@@ -217,4 +217,3 @@ new Swiper('.ribbon-slider', {
 });
 
 })();
-

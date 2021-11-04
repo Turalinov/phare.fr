@@ -1,3 +1,5 @@
+(function() {
+  console.log('possibilities-slider');
 //Инициализируем слайдер
 new Swiper('.possibilities-slider', {
   //Стрелки
@@ -212,4 +214,4 @@ new Swiper('.possibilities-slider', {
 
 
 //   // And if we need scrollbar
-
+})();
