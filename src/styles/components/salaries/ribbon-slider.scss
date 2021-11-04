@@ -1,0 +1,75 @@
+.ribbon-slider {
+}
+
+.ribbon-slider__wrapper {
+  //
+}
+
+.ribbon-slider__slide {
+  width: auto;
+}
+
+.ribbon-slider__content {
+  box-sizing: border-box;
+  background: #fff;
+  padding: 15px 70px;
+  position: relative;
+  font-size: 18px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: $green;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  @include phones {
+    font-size: 12px;
+    padding: 15px 25px;
+  }
+}
+
+
+// Стрелки (navigation)
+.possibilities-slider .swiper-button-next::after,
+.possibilities-slider .swiper-button-prev::after {
+  // color: #fff;
+  // font-size: 80px;
+}
+
+//Пагинация (pagination)
+.possibilities-slider .swiper-pagination {
+  // bottom: 0;
+}
+
+//Буллеты (pagination.type = bullets (по умолчанию))
+.possibilities-slider .swiper-pagination-bullet {
+  // width: 20px;
+  // height: 20px;
+  // line-height: 20px;
+  // font-size: 14px;
+  // background-color: #fff;
+}
+
+//Фракция (pagination.type = fraction )
+.possibilities-slider .swiper-pagination-fraction {
+  // font-size: 20px;
+  // color: #fff;
+}
+
+//Прогрессбар (pagination.type = progressbar )
+.possibilities-slider .swiper-pagination-progressbar-fill {
+  // background-color: red;
+}
+
+//сколл, если есть параметр scrollbar
+.possibilities-slider .swiper-scrollbar-drag {
+  // cursor: pointer;
+  // background-color: green;
+}
