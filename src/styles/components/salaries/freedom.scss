@@ -86,6 +86,21 @@
   font-size: 23px;
   white-space: nowrap;
 
+  &::after {
+    opacity: .3;
+    content: "";
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
   @include tablets {
     font-size: 18px;
     width: 220px;
@@ -108,15 +123,149 @@
   @include phones {
     padding: 10px 15px 10px;
   }
-
 }
 
 .freedom__block--famille {
   top: 0;
   left: 0;
 
+  &::after {
+    left: 260px;
+    top: 31px;
+    width: 164px;
+    height: 102px;
+    background-image: url("images/line1.svg");
+
+    @include phones {
+      left: 64px;
+      top: -66px;
+      width: 58px;
+      height: 75px;
+      background-image: url("images/line1-mob.svg");
+    }
+  }
+
   @include phones {
     top: 128px;
+  }
+}
+
+.freedom__block--transport {
+  top:40%;
+  left: 0;
+
+  &::after {
+    left: 232px;
+    top: 31px;
+    width: 265px;
+    height: 2px;
+    background-image: url("images/line2.svg");
+
+    @include phones {
+      left: 64px;
+      top: -29px;
+      width: 1.5px;
+      height: 40px;
+      background-image: url("images/line-mob.svg");
+    }
+  }
+
+  @include phones {
+    top: 205px;
+    transform: initial;
+  }
+}
+
+.freedom__block--aleas {
+  bottom: 0;
+  left: 0;
+
+  &::after {
+    left: 260px;
+    bottom: 27px;
+    width: 165px;
+    height: 103px;
+    background-image: url("images/line3.svg");
+
+    @include phones {
+      left: 64px;
+      bottom: 47px;
+      width: 1.5px;
+      height: 40px;
+      background-image: url("images/line-mob.svg");
+    }
+  }
+}
+
+.freedom__block--ecologie {
+  top: 0;
+  right: 0;
+
+  &::after {
+    right: 260px;
+    top: 31px;
+    width: 164px;
+    height: 102px;
+    background-image: url("images/line4.svg");
+
+    @include phones {
+      right: 64px;
+      top: -66px;
+      width: 58px;
+      height: 75px;
+      background-image: url("images/line4-mob.svg");
+    }
+  }
+
+  @include phones {
+    top: 128px;
+  }
+}
+
+.freedom__block--logement {
+  top:40%;
+  right: 0;
+
+  &::after {
+    right: 232px;
+    top: 31px;
+    width: 265px;
+    height: 2px;
+    background-image: url("images/line5.svg");
+
+    @include phones {
+      right: 64px;
+      top: -29px;
+      width: 1.5px;
+      height: 40px;
+      background-image: url("images/line-mob.svg");
+    }
+  }
+
+  @include phones {
+    top: 205px;
+    transform: initial;
+  }
+}
+
+.freedom__block--vie {
+  bottom: 0;
+  right: 0;
+
+  &::after {
+    right: 260px;
+    bottom: 27px;
+    width: 165px;
+    height: 103px;
+    background-image: url("images/line6.svg");
+
+    @include phones {
+      right: 64px;
+      bottom: 47px;
+      width: 1.5px;
+      height: 40px;
+      background-image: url("images/line-mob.svg");
+    }
   }
 }
 
@@ -124,8 +273,7 @@
   //
 }
 
-.freedom__block-pic {
-}
+.freedom__block-pic {}
 
 .freedom__block-img {
   width: 43px;
@@ -137,43 +285,3 @@
   }
 }
 
-.freedom__block--transport {
-  top:50%;
-  transform: translateY(-50%);
-  left: 0;
-
-  @include phones {
-    top: 205px;
-    transform: initial;
-  }
-}
-
-.freedom__block--aleas {
-  bottom: 0;
-  left: 0;
-}
-
-.freedom__block--ecologie {
-  top: 0;
-  right: 0;
-
-  @include phones {
-    top: 128px;
-  }
-}
-
-.freedom__block--logement {
-  top:50%;
-  transform: translateY(-50%);
-  right: 0;
-
-  @include phones {
-    top: 205px;
-    transform: initial;
-  }
-}
-
-.freedom__block--vie {
-  bottom: 0;
-  right: 0;
-}
