@@ -9,6 +9,7 @@
   align-items: end;
 
   @include phones {
+    justify-content: start;
     overflow-x: auto;
     width: 100%;
     white-space: nowrap;
