@@ -62,6 +62,13 @@ task('images', () => {
     .pipe(dest(`${DIST_PATH}/images/`))
 })
 
+
+task('json', () => {
+  return src([`${SRC_PATH}/json/*.json`])
+    .pipe(dest(`${DIST_PATH}/json/`))
+})
+
+
 task('icons', () => {
   return src(`${SRC_PATH}/images/icons/*.svg`)
     .pipe(svgo({
@@ -117,13 +124,14 @@ task('watch', () => {
   watch(`./${SRC_PATH}/**/*.html`, series('copy:html'))
   watch(`./${SRC_PATH}/scripts/*`, series('scripts'))
   watch(`./${SRC_PATH}/images/icons/*.svg`, series('icons'))
+  watch(`./${SRC_PATH}/json/*.json`, series('json'))
   watch([`./${SRC_PATH}/images/*.png`, `./${SRC_PATH}/images/*.svg`], series('images'))
 })
 
 task('default',
   series(
     "clean",
-    parallel("copy:html", "styles", "scripts", "icons", "favicon", "images"),
+    parallel("copy:html", "styles", "scripts", "icons", "favicon", "images", "json"),
     parallel("watch", "server")
   )
 )
@@ -132,6 +140,6 @@ task('default',
 task("build",
   series(
     "clean",
-    parallel("copy:html", "styles", "scripts", "icons", "favicon", "images")
+    parallel("copy:html", "styles", "scripts", "icons", "favicon", "images", "json")
   )
 )

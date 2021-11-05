@@ -45,6 +45,7 @@
     "stylelint-scss": "^4.0.0"
   },
   "dependencies": {
+    "lottie-web": "^5.7.14",
     "normalize.css": "^8.0.1",
     "swiper": "^7.2.0"
   },
