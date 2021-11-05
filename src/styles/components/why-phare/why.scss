@@ -1,0 +1,127 @@
+.why {
+  position: relative;
+  padding: 125px 0 90px;
+
+  @include phones {
+    padding: 85px 0 30px;
+  }
+
+}
+// контейнер изображения
+.why__img {
+  // height: 300px;
+  padding: 0 0 30% 0;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 60px;
+
+  @include tablets {
+    margin-bottom: 40px;
+  }
+
+  @include phones {
+    height: 161px;
+    padding: 0 0 0 0;
+  }
+}
+// само изображение
+.why__img-elem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center -190px;
+
+  @include tablets {
+    object-position: center;
+  }
+}
+
+
+.why__img-elem--second {
+  object-position: center -300px;
+
+  @include tablets {
+    object-position: center -196px;
+  }
+
+  @include phones {
+    object-position: center;
+  }
+}
+
+.why__content{
+  max-width: 744px;
+  margin: 0 auto 100px;
+@include tablets {
+  margin: 0 auto 70px;
+}
+
+@include phones {
+  margin: 0 auto 60px;
+}
+}
+
+.why__content:last-child {
+  margin: 0 auto 0;
+}
+
+
+.why__container{
+  //
+}
+.why__title{
+  font-size: 50px;
+  margin-bottom: 40px;
+
+  @include tablets {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+
+  @include phones {
+    font-size: 25px;
+  }
+}
+.why__desc{
+  @include jost(semibold);
+  margin-bottom: 20px;
+
+  @include tablets {
+    font-size: 18px;
+  }
+
+  @include phones {
+    @include jost(medium);
+    font-size: 14px;
+  }
+}
+.why__text {
+  @include tablets {
+    font-size: 18px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+}
+
+.why__text > p + p {
+  margin-top: 25px;
+
+  @include tablets {
+    margin-top: 18px;
+  }
+}
+
+.why__btn {
+  @include jost();
+  margin-top: 40px;
+
+  @include phones {
+    margin-top: 25px;
+  }
+}
