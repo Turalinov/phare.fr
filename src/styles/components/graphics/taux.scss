@@ -1,0 +1,12 @@
+.taux {}
+
+.taux__icon {
+  width: 119px;
+  height: 131px;
+  box-shadow: 0px 10px 27px rgba(124, 136, 190, 0.15);
+
+  @include phones {
+    width: 57px;
+    height: 63px;
+  }
+}

@@ -5,25 +5,29 @@
     padding: 30px 0px;
   }
 }
+
 .hsm__wrapper {
   display: flex;
-  flex: 1;
+  justify-content: space-between;
+  column-gap: 82px;
 
   @include phones {
     flex-direction: column-reverse;
+    align-items: center;
   }
 }
+
 .hsm__content {
-  //
-}
-.hsm__graph {
-  @include phones {
-    margin-bottom: 20px;
+  max-width: 50%;
+
+  @include tablets {
+    max-width: 50%;
   }
-}
 
-.hsm__graph-img {
-
+  @include phones {
+    max-width: 100%;
+    // margin-top: -180px;
+  }
 }
 
 .hsm__title {
@@ -69,13 +73,25 @@
       left: 0;
       bottom: 0;
       display: block;
-      width: 100%;
+      width: 0;
       height: 3px;
       background-color: $blue;
+
+
+
 
       @include phones {
         height: 1.5px;
       }
+    }
+  }
+}
+
+.hsm__title._active {
+  & span:first-child {
+    &::after {
+      width: 100%;
+      animation: line 2s cubic-bezier(.47, -0.36, .67, 1.27);
     }
   }
 }
@@ -87,6 +103,7 @@
     margin-bottom: 55px;
   }
 }
+
 .hsm__item {
   position: relative;
   max-width: 355px;
@@ -119,6 +136,7 @@
     margin-top: 23px;
   }
 }
+
 .hsm__name {
   margin-bottom: 13px;
 
@@ -126,6 +144,7 @@
     margin-bottom: 10px;
   }
 }
+
 .hsm__desc {
   margin-bottom: 15px;
   font-size: 14px;
@@ -161,59 +180,269 @@
   }
 }
 
+.hsm__graph-wrap {
+  position: relative;
+  width: 50%;
+
+  @include phones {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+.hsm__graph {
+  position: relative;
+  // background-color: #cecece;
+  // top: -40px;
+  // right: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 580px;
+  height: 705px;
+
+  @include tablets {
+    transform: scale(0.8) translate(-10%, -10%);
+    // left: 50%;
+  }
+
+  @include phones {
+    // transform: scale(0.5) translate(3%, -50%);
+    transform: none;
+    margin: 0 auto 20px;
+    width: 280px;
+    height: 342px;
+  }
+}
+
+.hsm__leaves,
+.hsm__peoples,
+.hsm__check,
+.hsm__home,
+.hsm__woman,
+.hsm__woman2,
+.hsm__man,
+.hsm__trained,
+.hsm__classement-demondes,
+.hsm__report,
+.hsm__total,
+.hsm__action-impact-large,
+.hsm__session,
+.hsm__taux {
+  position: absolute;
+  display: inline-block;
+}
+
+
 .hsm__leaves,
 .hsm__peoples {
   fill: $icons-color;
   width: 65px;
   height: 65px;
+
+  @include phones {
+    width: 31px;
+    height: 31px;
+  }
 }
+
+.hsm__check,
+.hsm__home {
+  width: 65px;
+  height: 65px;
+
+  @include phones {
+    width: 31px;
+    height: 31px;
+  }
+}
+
+.hsm__check-img,
+.hsm__home-img {
+  width: 65px;
+  height: 65px;
+
+  @include phones {
+    width: 31px;
+    height: 31px;
+  }
+}
+
 
 .hsm__woman,
 .hsm__woman2,
 .hsm__man {
   width: 55px;
   height: 55px;
+  @include phones {
+    width: 27px;
+    height: 27px;
+  }
 }
 
-.hsm__graph1 {
-  width: 357px;
+.hsm__woman-img,
+.hsm__woman2-img,
+.hsm__man-img {
+  width: 55px;
+  height: 55px;
+  @include phones {
+    width: 27px;
+    height: 27px;
+  }
 }
 
-.hsm__trained {
-  width: 152px;
-}
+.hsm__leaves {
+  left: 36px;
+  top: 22px;
 
-.hsm__graph2 {
-  width: 183px;
-}
-
-.hsm__document {
-  width: 206px;
-}
-
-.hsm__woman2 {
+  @include phones {
+    left: 16px;
+    top: 12px;
+  }
 }
 
 .hsm__peoples {
-  //
-}
+  left: 206px;
+  top: 332px;
 
-.hsm__graph3 {
-  width: 226px;
+  @include phones {
+    left: 99px;
+    top: 159px;
+  }
 }
 
 .hsm__check {
-  //
-}
+  left: -41px;
+  top: 462px;
 
-.hsm__graph4 {
-  width: 199px;
-}
-
-.hsm__graph5 {
-  width: 209px;
+  @include phones {
+    left: -19px;
+    top: 222px;
+  }
 }
 
 .hsm__home {
-  //
+  left: 386px;
+  top: 568px;
+
+  @include phones {
+    left: 187px;
+    top: 274px;
+  }
+
+}
+
+.hsm__woman {
+  left: 136px;
+  top: 28px;
+
+  @include phones {
+    left: 65px;
+    top: 13px;
+  }
+
+}
+
+.hsm__woman2 {
+  left: 466px;
+  top: 218px;
+
+  @include phones {
+    left: 223px;
+    top: 105px;
+  }
+
+}
+
+.hsm__man {
+  left: 156px;
+  top: 566px;
+
+  @include phones {
+    left: 73px;
+    top: 273px;
+  }
+
+}
+
+.hsm__trained {
+  left: 40px;
+  top: 116px;
+
+  @include phones {
+    transform: scale(.5);
+    left: -20px;
+    top: 42px;
+  }
+
+}
+
+.hsm__classement-demondes {
+  left: 5px;
+  top: 216px;
+
+  @include phones {
+    left: 0px;
+    top: 100px;
+  }
+
+}
+
+
+.hsm__report {
+  left: 207px;
+  top: 206px;
+
+  @include phones {
+    left: 61px;
+    top: 87px;
+    transform: scale(.5);
+  }
+
+}
+
+.hsm__total {
+  left: 307px;
+  top: 316px;
+
+  @include phones {
+    left: 149px;
+    top: 156px;
+  }
+
+}
+
+.hsm__action-impact-large {
+  left: 69px;
+  top: 452px;
+
+  @include phones {
+    left: 23px;
+    top: 216px;
+  }
+
+}
+
+.hsm__session {
+  left: 228px;
+  top: 0;
+
+  @include phones {
+    width: 171px;
+    height: 83px;
+    left: 110px;
+    top: 0;
+    }
+}
+
+.hsm__taux {
+  left: 235px;
+  top: 574px;
+
+  @include phones {
+    width: 57px;
+    height: 63px;
+    left: 114px;
+    top: 278px;
+  }
 }

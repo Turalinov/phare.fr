@@ -1,0 +1,12 @@
+.session {}
+
+.session__icon {
+  width: 357px;
+  height: 171px;
+  box-shadow: 0px 10px 27px rgba(124, 136, 190, 0.15);
+
+  @include phones {
+    width: 171px;
+    height: 83px;
+  }
+}
