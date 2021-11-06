@@ -216,9 +216,12 @@
 .hsm__action-impact-large,
 .hsm__session,
 .hsm__taux {
+  transition: all 1s ease;
   position: absolute;
   display: inline-block;
   opacity: 0;
+  cursor: pointer;
+
 }
 
 
