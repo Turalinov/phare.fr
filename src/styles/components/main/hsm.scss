@@ -73,25 +73,12 @@
       left: 0;
       bottom: 0;
       display: block;
-      width: 0;
       height: 3px;
       background-color: $blue;
-
-
-
 
       @include phones {
         height: 1.5px;
       }
-    }
-  }
-}
-
-.hsm__title._active {
-  & span:first-child {
-    &::after {
-      width: 100%;
-      animation: line 2s cubic-bezier(.47, -0.36, .67, 1.27);
     }
   }
 }
@@ -231,6 +218,7 @@
 .hsm__taux {
   position: absolute;
   display: inline-block;
+  opacity: 0;
 }
 
 
@@ -274,6 +262,7 @@
 .hsm__man {
   width: 55px;
   height: 55px;
+
   @include phones {
     width: 27px;
     height: 27px;
@@ -285,6 +274,7 @@
 .hsm__man-img {
   width: 55px;
   height: 55px;
+
   @include phones {
     width: 27px;
     height: 27px;
@@ -432,7 +422,7 @@
     height: 83px;
     left: 110px;
     top: 0;
-    }
+  }
 }
 
 .hsm__taux {
@@ -445,4 +435,74 @@
     left: 114px;
     top: 278px;
   }
+}
+
+
+
+  .hsm__title._active {
+    & span:first-child {
+      &::after {
+        animation: line 2s forwards cubic-bezier(.47, -0.36, .67, 1.27);
+      }
+    }
+  }
+
+
+  .hsm__graph-wrap._active{
+  .hsm__session {
+    animation: show 1s 1s forwards cubic-bezier(.47, -0.36, .67, 1.27);
+  }
+
+  .hsm__woman {
+    animation: show 1s 1.5s forwards cubic-bezier(.47, -0.36, .67, 1.27);
+  }
+
+  .hsm__trained {
+    animation: show 1s 2s forwards cubic-bezier(.47, -0.36, .67, 1.27);
+  }
+
+  .hsm__leaves {
+    animation: show 1s 2s forwards cubic-bezier(.47, -0.36, .67, 1.27);
+  }
+
+  .hsm__report {
+    animation: show 1s 2.5s forwards cubic-bezier(.47, -0.36, .67, 1.27);
+  }
+
+  .hsm__woman2 {
+    animation: show 1s 3s forwards cubic-bezier(.47, -0.36, .67, 1.27);
+  }
+
+  .hsm__classement-demondes {
+    animation: show 1s 3s forwards cubic-bezier(.47, -0.36, .67, 1.27);
+  }
+
+  .hsm__total {
+    animation: show 1s 3.5s forwards cubic-bezier(.47, -0.36, .67, 1.27);
+  }
+
+  .hsm__action-impact-large {
+    animation: show 1s 4s forwards cubic-bezier(.47, -0.36, .67, 1.27);
+  }
+
+  .hsm__peoples {
+    animation: show 1s 4s forwards cubic-bezier(.47, -0.36, .67, 1.27);
+  }
+
+  .hsm__man {
+    animation: show 1s 4.5s forwards cubic-bezier(.47, -0.36, .67, 1.27);
+  }
+
+  .hsm__check {
+    animation: show 1s 5s forwards cubic-bezier(.47, -0.36, .67, 1.27);
+  }
+
+  .hsm__taux {
+    animation: show 1s 5s forwards cubic-bezier(.47, -0.36, .67, 1.27);
+  }
+
+  .hsm__home {
+    animation: show 1s 6s forwards cubic-bezier(.47, -0.36, .67, 1.27);
+  }
+
 }

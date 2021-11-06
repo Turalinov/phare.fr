@@ -13,7 +13,7 @@
 
         const animItemHeight = animItem.offsetHeight; //высота элемента 182
         const animItemOffset = offset(animItem).top; //позиция объекта относительно вверха окна
-        const animStart = 4; // коэффициент регулирования начала анимация
+        const animStart = 6; // коэффициент регулирования начала анимация
 
         let animItemPoint = window.innerHeight - animItemHeight / animStart; // 700 - 200 /4 = 750
         if ( animItemHeight > window.innerHeight) {
