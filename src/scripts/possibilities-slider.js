@@ -52,7 +52,7 @@ new Swiper('.possibilities-slider', {
   //угол срабатывания свайпа
   // touchAngle: 45,
   //курсор перетаскивания
-  grabCursor: true,
+  // grabCursor: true,
   //переключение слайда при клике на него
   // slideToClickedSlide: true,
 
@@ -105,7 +105,7 @@ new Swiper('.possibilities-slider', {
   // slidesPerColumn: 2, //для корректной работы отключить автовысоту а также слайдеру задать height: 700 и сами слайдам height: calc((100% - 30px) /2); overflow:hidden;
 
   //бесконечный слайдер
-  // loop: true,
+  loop: true,
 
   //количество дублирующих слайдов для бесконечного слайдера если slidesPerView больше 1
   // loopedSlides: 3,
@@ -114,18 +114,18 @@ new Swiper('.possibilities-slider', {
   // freeMode: true,
 
   //автопрокрутка
-  // autoplay: {
-  //   //пауза между прокруткой
-  //   delay: 1000,
-  //   //закончить на последнем слайде если отключена бесконечный
-  //   stopOnLastSlide: false,
-  //   //отключить после ручного переключения
-  //   disableOnInteraction: false,
+  autoplay: {
+    //пауза между прокруткой
+    delay: 1000,
+    //закончить на последнем слайде если отключена бесконечный
+    stopOnLastSlide: false,
+    //отключить после ручного переключения
+    disableOnInteraction: false,
 
-  // },
+  },
 
   //скорость переключения слайдов
-  // speed: 800,
+  speed: 1500,
 
   //вертикальный слайдер
   // direction: 'vertical', // для этого нужно установить высоту всему слайдеру
@@ -199,6 +199,20 @@ new Swiper('.possibilities-slider', {
   //     slidesPerView: 3,
   //   }
   // },
+
+  on: {
+    init() {
+  //остановить при наведении
+      this.el.addEventListener('mouseenter', () => {
+        this.autoplay.stop();
+      });
+
+  //возобновить при отведении
+      this.el.addEventListener('mouseleave', () => {
+        this.autoplay.start();
+      });
+    }
+  },
 
 
 });
