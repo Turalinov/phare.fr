@@ -3,7 +3,6 @@
 
   const wrapper = document.querySelector('.hsm__graph-wrap')
 
-
   if (wrapper) {
     const hsmSession = wrapper.querySelector('.hsm__session');
     const hsmClassementDemondes = wrapper.querySelector('.hsm__classement-demondes');
@@ -14,29 +13,14 @@
     const hsmTrained = wrapper.querySelector('.hsm__trained');
     const hsmReport= wrapper.querySelector('.hsm__report');
 
-
-
     const hsmLeaves = wrapper.querySelector('.hsm__leaves');
     const hsmPeoples = wrapper.querySelector('.hsm__peoples');
     const hsmCheck = wrapper.querySelector('.hsm__check');
     const hsmHome = wrapper.querySelector('.hsm__home');
 
-
     const hsmWoman = wrapper.querySelector('.hsm__woman');
     const hsmWoman2 = wrapper.querySelector('.hsm__woman2');
     const hsmMan = wrapper.querySelector('.hsm__man');
-
-
-
-
-
-
-
-
-
-
-
-    console.log(wrapper);
 
     wrapper.addEventListener('mouseover', (e) => {
       const el = e.target.parentNode;
@@ -53,21 +37,9 @@
      runScale('hsm__peoples', hsmPeoples, 1)
      runScale('hsm__check', hsmCheck, 1)
      runScale('hsm__home', hsmHome, 1)
-
-
      runScale('hsm__woman', hsmWoman, 1)
      runScale('hsm__woman2', hsmWoman2, 1)
      runScale('hsm__man', hsmMan, 1)
-
-
-
-
-
-
-
-
-
-
 
       function runScale(className, node, coefficient) {
         let scaleValue = '0.3';
@@ -86,8 +58,6 @@
         }
 
 
-          console.log(el);
-          console.log(className);
           if(el.classList.contains(`${className}`)) {
             node.style.cssText = `transform: scale(${scaleValue})`;
           } else {
@@ -96,18 +66,5 @@
         }
     })
 
-
-
-    // //элементы
-    // const hsmSession = wrapper.querySelector('.hsm__session');
-
-    // //коээфициенты
-    // const forHsmSession = 40;
-
-    // //скорость анимации
-    // const speed  = 0.05;
-
   }
-
-
 })()

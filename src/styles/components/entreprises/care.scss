@@ -89,6 +89,7 @@
   width: 692px;
   height: 428px;
   right: 0;
+  transition: all .5s ease;
 
   @include phones {
     width: 360px;
@@ -103,6 +104,7 @@
   width: 133px;
   height: 256px;
   box-shadow: 0 9px 23px rgba(124, 136, 190, 0.15);
+  transition: all .5s ease;
 
   @include phones {
     left: 9px;
