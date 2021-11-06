@@ -27,15 +27,23 @@
 
 .technology__preview {
   position: relative;
-  width: 100%;
+  width: 524px; /* 100% */
   height: 583px;
   background: url("images/technology-bg.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  // animation: название скорость шаги количество
+  animation: smooth 5s steps(20) infinite;
+  // background-size: contain;
+  // background-repeat: no-repeat;
 
   @include phones {
     height: 307px;
+  }
+}
+
+@keyframes smooth {
+  100% {
+    background-position: -10490px;
   }
 }
 
