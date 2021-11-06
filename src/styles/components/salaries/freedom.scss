@@ -75,17 +75,7 @@
 
 .freedom__block {
   position: absolute;
-  padding: 10px 20px 10px 30px;
-  border-radius: 4px;
-  background-color: $white;
-  box-shadow: 0px 15px 40px rgba(55, 68, 131, 0.05);
-  display: flex;
-  align-items: center;
   width: 260px;
-  justify-content: space-around;
-  font-size: 23px;
-  white-space: nowrap;
-
   &::after {
     opacity: .3;
     content: "";
@@ -94,12 +84,45 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: -1;
+    transition: transform 1s ease;
 
   }
 
-  &:hover::after {
-    opacity: 1;
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
   }
+
+  @include tablets {
+    width: 220px;
+  }
+
+  @include phones {
+    width: 129px;
+    column-gap: 12px;
+  }
+}
+
+.freedom__block-inner {
+  padding: 10px 20px 10px 30px;
+  border-radius: 4px;
+  background-color: $white;
+  // box-shadow: 0px 15px 40px rgba(55, 68, 131, 0.05);
+  display: flex;
+  align-items: center;
+  width: 260px;
+  justify-content: space-around;
+  font-size: 23px;
+  white-space: nowrap;
+  transition: transform 1s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    box-shadow: 0px 15px 40px rgba(55, 68, 131, 0.05);
+  }
+
 
   @include tablets {
     font-size: 18px;
@@ -116,7 +139,7 @@
   }
 }
 
-.freedom__block--reverse {
+.freedom__block--reverse .freedom__block-inner{
   flex-direction: row-reverse;
   padding: 10px 30px 10px 20px;
 
