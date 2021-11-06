@@ -60,11 +60,44 @@
 
           if(el.classList.contains(`${className}`)) {
             node.style.cssText = `transform: scale(${scaleValue})`;
-          } else {
+          };
+
+        }
+
+
+    })
+
+
+
+    wrapper.addEventListener('mouseout', (e) => {
+      const el = e.target.parentNode;
+
+     stopScale('session', hsmSession)
+     stopScale('classement-demondes', hsmClassementDemondes)
+     stopScale('total', hsmTotal)
+     stopScale('taux', hsmTaux)
+     stopScale('action-impact-large', hsmActionImpactLarge)
+     stopScale('hsm__trained', hsmTrained)
+     stopScale('hsm__report', hsmReport)
+     stopScale('hsm__leaves', hsmLeaves)
+     stopScale('hsm__peoples', hsmPeoples)
+     stopScale('hsm__check', hsmCheck)
+     stopScale('hsm__home', hsmHome)
+     stopScale('hsm__woman', hsmWoman)
+     stopScale('hsm__woman2', hsmWoman2)
+     stopScale('hsm__man', hsmMan)
+
+        function stopScale(className, node) {
+
+          if(el.classList.contains(`${className}`)) {
             node.style.cssText = `transform: initial`;
           }
         }
-    })
+
+
+
+
+  })
 
   }
 })()

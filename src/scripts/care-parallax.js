@@ -5,9 +5,11 @@
 
   if (careDevices) {
 
-  careDevices.addEventListener('mouseover', (e) => {
     carePhone = document.querySelector('.care__phone');
     careMacbook = document.querySelector('.care__macbook');
+
+
+  careDevices.addEventListener('mouseover', (e) => {
 
 
     const el = e.target;
@@ -33,8 +35,6 @@
   })
 
    careDevices.addEventListener('mouseout', (e) => {
-    carePhone = document.querySelector('.care__phone');
-    careMacbook = document.querySelector('.care__macbook');
 
 
     const el = e.target;

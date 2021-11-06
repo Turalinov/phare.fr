@@ -18,6 +18,7 @@
 }
 
 .last-month__arrow {
+  pointer-events: none;
   fill: #6BB554;
   height: 8px;
   width: 8px;
@@ -31,6 +32,7 @@
 }
 
 .last-month__percent {
+  pointer-events: none;
   color: #6BB554;
   margin-right: 6px;
 
@@ -40,6 +42,7 @@
 }
 
 .last-month__text {
+  pointer-events: none;
   @include jost(medium);
   opacity: 0.5;
 }

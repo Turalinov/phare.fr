@@ -12,6 +12,7 @@
 }
 
 .employer__icon {
+  pointer-events: none;
   width: 16px;
   height: 17px;
   margin-right: 11px;
@@ -24,6 +25,7 @@
 }
 
 .employer__text {
+  pointer-events: none;
   @include jost(medium);
   font-size: 14px;
 
