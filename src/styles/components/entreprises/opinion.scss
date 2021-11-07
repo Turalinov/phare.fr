@@ -64,11 +64,17 @@
   position: relative;
   width: 247px;
   height: 371px;
+  transform: scale(1.7);
+
+  @include tablets {
+    transform: scale(1.2);
+  }
 
   @include phones {
     width: 187px;
     height: 283px;
     margin-bottom: 50px;
+    transform: scale(1.7);
   }
 
 }
