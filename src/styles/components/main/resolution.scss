@@ -50,19 +50,18 @@
 }
 
 .resolution__btn-wrap{
-  margin-bottom: 140px;
+  margin-bottom: 40px;
 
-  @include phones {
-    margin-bottom: 40px;
-  }
+  // @include phones {
+  //   margin-bottom: 40px;
+  // }
 }
 
 .resolution__scheme {
-  margin-bottom: 125px;
+  margin-bottom: 40px;
 
   @include phones {
     order: -1;
-    margin-bottom: 40px;
   }
 }
 

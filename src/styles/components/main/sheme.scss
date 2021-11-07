@@ -1,5 +1,19 @@
 .scheme {
+}
+
+.sheme__lottie {
+  @include phones {
+    display: none;
+  }
+}
+
+.scheme__wrap {
   position: relative;
+  display: none;
+
+  @include phones {
+    display: block;
+  }
 }
 
 .sheme__lines {

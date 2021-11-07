@@ -23,6 +23,24 @@
         if ((pageYOffset > animItemOffset - animItemPoint) && (pageYOffset < animItemOffset + animItemHeight)) //возвращает количество пикселей, на которое прокручен документ по вертикали
         {
           animItem.classList.add('_active');
+
+
+          if (animItem.classList.contains('technology__wrap') && !animItem.classList.contains('_one')) {
+
+            const technologyLottie = lottie.loadAnimation({
+              container: document.querySelector('#technology__lottie'),
+              rendered: 'svg',
+              loop: false,
+              autoplay: false,
+              path: './json/technology__lottie.json',
+            })
+
+            console.log(technologyLottie.play());
+            animItem.classList.add('_one');
+          }
+
+
+
         } else {
           if (!animItem.classList.contains('_anim-no-hide')) {
             animItem.classList.remove('_active');

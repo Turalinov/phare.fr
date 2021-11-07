@@ -39,5 +39,13 @@
   })
 
 
+  anim.loadAnimation({
+    container: document.querySelector('#sheme-lottie'),
+    rendered: 'svg',
+    loop: true,
+    autoplay: true,
+    path: './json/sheme-lottie.json',
+  })
+
 
 })();

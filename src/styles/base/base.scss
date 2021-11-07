@@ -286,3 +286,70 @@ img {
     opacity: 0;
   }
 }
+
+@keyframes showPhare {
+  from {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+}
+
+@keyframes showTech1 {
+  from {
+    transform: scale(1.2) translate(-30px, -30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+
+@keyframes showTech2 {
+  from {
+    transform: scale(1.2) translate(30px, -30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes showTech3 {
+  from {
+    transform: scale(1.2) translate(-30px, 30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+@keyframes showTech4 {
+  from {
+    transform: scale(1.2) translate(30px, 30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+
+

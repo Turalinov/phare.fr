@@ -108,19 +108,17 @@
   padding: 10px 20px 10px 30px;
   border-radius: 4px;
   background-color: $white;
-  // box-shadow: 0px 15px 40px rgba(55, 68, 131, 0.05);
   display: flex;
   align-items: center;
   width: 260px;
   justify-content: space-around;
   font-size: 23px;
   white-space: nowrap;
-  transition: transform 1s ease;
 
   &:hover {
-    transform: scale(1.1);
-    z-index: 1;
-    box-shadow: 0px 15px 40px rgba(55, 68, 131, 0.05);
+    & .freedom__block-pic {
+      transform: scale(1.1);
+    }
   }
 
 
@@ -158,6 +156,7 @@
     width: 164px;
     height: 102px;
     background-image: url("images/line1.svg");
+    transition: all 1s ease;
 
     @include phones {
       left: 64px;
@@ -296,11 +295,13 @@
   //
 }
 
-.freedom__block-pic {}
-
-.freedom__block-img {
+.freedom__block-pic {
   width: 43px;
   height: 43px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: all 1s ease;
 
   @include tablets {
     width: 34px;
@@ -308,3 +309,85 @@
   }
 }
 
+.freedom__block--famille {
+  & .freedom__block-inner {
+    & .freedom__block-pic {
+      background-image: url("images/famille.svg");
+    }
+
+    &:hover {
+      & .freedom__block-pic {
+        background-image: url("images/famille-hover.svg");
+      }
+    }
+  }
+}
+
+
+.freedom__block--transport {
+  & .freedom__block-inner {
+    & .freedom__block-pic {
+      background-image: url("images/transport.svg");
+    }
+
+    &:hover {
+      & .freedom__block-pic {
+        background-image: url("images/transport-hover.svg");
+      }
+    }
+  }
+}
+
+.freedom__block--aleas {
+  & .freedom__block-inner {
+    & .freedom__block-pic {
+      background-image: url("images/aleas.svg");
+    }
+
+    &:hover {
+      & .freedom__block-pic {
+        background-image: url("images/aleas-hover.svg");
+      }
+    }
+  }
+}
+
+.freedom__block--ecologie {
+  & .freedom__block-inner {
+    & .freedom__block-pic {
+      background-image: url("images/ecologie.svg");
+    }
+
+    &:hover {
+      & .freedom__block-pic {
+        background-image: url("images/ecologie-hover.svg");
+      }
+    }
+  }
+}
+.freedom__block--logement {
+  & .freedom__block-inner {
+    & .freedom__block-pic {
+      background-image: url("images/logement.svg");
+    }
+
+    &:hover {
+      & .freedom__block-pic {
+        background-image: url("images/logement-hover.svg");
+      }
+    }
+  }
+}
+.freedom__block--vie {
+  & .freedom__block-inner {
+    & .freedom__block-pic {
+      background-image: url("images/vie.svg");
+    }
+
+    &:hover {
+      & .freedom__block-pic {
+        background-image: url("images/vie-hover.svg");
+      }
+    }
+  }
+}
