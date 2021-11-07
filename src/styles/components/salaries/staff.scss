@@ -106,7 +106,8 @@
     left: initial;
     width: 187px;
     height: 200px;
-    margin: 0 auto 25px;
+    // margin: 0 auto 25px;
+    margin: 0 auto 69px;
   }
 }
 
@@ -114,8 +115,10 @@
   position: absolute;
   width: 810px;
   height: 496px;
-  right: 0;
-  bottom: 0;
+  // right: 0;
+  // bottom: 0;
+  left: 171px;
+  top: -43px;
 
   @include phones {
     display: none;
@@ -124,15 +127,27 @@
 
 .staff__phone {
   position: absolute;
-  top: 10px;
-  left: 91px;
-  width: 222px;
-  height: 406px;
+  // top: 10px;
+  // left: 91px;
+  // width: 222px;
+  // height: 406px;
+
+  top: -55px;
+  left: 41px;
+  width: 390px;
+  height: 468px;
 
   @include phones {
-    width: 111px;
+    // width: 111px;
+    // height: 203px;
+    // left: 57px;
+
+    width: 240px;
     height: 203px;
-    left: 57px;
+    left: -21px;
+    // top: -36px;
+    top: 10px;
+    transform: scale(1.5);
   }
 }
 

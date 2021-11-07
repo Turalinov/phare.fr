@@ -56,5 +56,13 @@
     path: './json/opinion-lottie.json',
   })
 
+  anim.loadAnimation({
+    container: document.querySelector('#staff-phone'),
+    rendered: 'svg',
+    loop: true,
+    autoplay: true,
+    path: './json/staff-phone.json',
+  })
+
 
 })();
