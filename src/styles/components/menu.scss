@@ -225,4 +225,9 @@
   border-color: $blue;
   color: $blue;
   background-color: $white;
+
+  &:hover {
+    color:$white;
+    background-color: $blue;
+  }
 }

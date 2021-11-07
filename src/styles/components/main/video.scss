@@ -76,6 +76,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: all .2s linear;
+
+  &:hover {
+    background-color: $blue;
+
+    &::before {
+      background-image: url("images/play-hover.svg");
+    }
+  }
 
   @include tablets {
     width: 100px;
@@ -88,6 +97,7 @@
   }
 
   &::before {
+    transition: all .2s linear;
     content: "";
     position: absolute;
     display: block;

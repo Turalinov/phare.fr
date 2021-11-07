@@ -145,8 +145,16 @@
   @include jost(medium);
   color: $blue;
   font-size: 14px;
+  transform: translateX(0);
+
+  &:hover {
+    &::after {
+      transform: translateX(5px);
+    }
+  }
 
   &::after {
+    transition: all 1s ease;
     content: "";
     display: inline-block;
     margin-left: 5px;

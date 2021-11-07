@@ -14,7 +14,6 @@
 
     const el = e.target;
 
-    console.log(el);
 
     runScale('care__phone', carePhone, true);
     runScale('care__macbook', careMacbook, false);

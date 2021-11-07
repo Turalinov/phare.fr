@@ -222,19 +222,36 @@
   }
 }
 
-.technology__link {
+.technology__links-item {
   @include jost(semibold);
-  padding: 14px 21px 12px 20px;
-  background-color: $white;
   width: 193px;
-  border-radius: 5px;
 
   @include phones {
     width: 100%;
   }
 }
 
-.technology__link+.technology__link {
+.technology__links-item-elem {
+  color: inherit;
+  padding: 14px 21px 12px 20px;
+  background-color: $white;
+  display: block;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $blue;
+    color: $white;
+
+    & .technology__link-text {
+      color: $white;
+      &::after {
+        background-image: url(images/arrow-right-lg-hover.svg);
+      }
+    }
+  }
+}
+
+.technology__links-item+.technology__links-item {
   margin-left: 20px;
 
   @include phones {
@@ -243,7 +260,8 @@
   }
 }
 
-.technology__link-title {}
+.technology__link-title {
+}
 
 .technology__link-text {
   display: block;

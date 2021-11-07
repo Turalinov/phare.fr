@@ -16,6 +16,10 @@ button {
   background-color: $blue;
   @include jost(medium);
 
+  &:hover {
+    background-color: #4c5a9f;
+  }
+
   @include phones {
     font-size: 14px;
   }
