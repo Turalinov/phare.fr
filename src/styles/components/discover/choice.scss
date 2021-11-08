@@ -125,5 +125,10 @@
   @include phones {
     margin-top: 40px;
     display: block;
+    color: $blue;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
