@@ -22,7 +22,8 @@
   font-size: 12px;
 }
 
-.header--discover {
+.header--discover,
+.header--subscription {
     padding: 20px 0;
 
     & .header__btn {
@@ -36,4 +37,16 @@
         justify-content: center;
       }
     }
+}
+
+.header--subscription {
+  display: none;
+
+  & .container {
+      justify-content: center;
+  }
+
+  @include phones {
+    display: block;
+  }
 }

@@ -222,6 +222,49 @@ img {
   }
 };
 
+@keyframes radio2 {
+  0% {
+    width: 0;
+    height: 0;
+  }
+
+  30% {
+    opacity: 0.8;
+  }
+
+  80% {
+    opacity: 0.6;
+  }
+
+  100% {
+    width: 218px;
+    height: 218px;
+    opacity: 0;
+  }
+}
+
+@keyframes radio3 {
+  0% {
+    width: 0;
+    height: 0;
+  }
+
+  30% {
+    opacity: 0.8;
+  }
+
+  80% {
+    opacity: 0.6;
+  }
+
+  100% {
+    width: 685px;
+    height: 685px;
+    opacity: 0;
+  }
+}
+
+
 @keyframes radio1-mob {
   0% {
     width: 0;
@@ -244,26 +287,6 @@ img {
 }
 
 
-@keyframes radio2 {
-  0% {
-    width: 0;
-    height: 0;
-  }
-
-  30% {
-    opacity: 0.8;
-  }
-
-  80% {
-    opacity: 0.6;
-  }
-
-  100% {
-    width: 218px;
-    height: 218px;
-    opacity: 0;
-  }
-}
 
 
 @keyframes radio2-mob {

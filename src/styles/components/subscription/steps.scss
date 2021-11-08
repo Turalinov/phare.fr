@@ -1,0 +1,188 @@
+.steps {
+  // min-height: 100%;
+}
+
+.steps__wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.steps__content {
+  position: absolute;
+  width: 65%;
+  left: 0;
+  height: 100%;
+  overflow: auto;
+  padding: 90px 140px 20px 120px;
+
+  @include tablets {
+    width: 100%;
+  }
+
+  @include phones {
+    padding: 90px 20px 20px 20px;
+  }
+}
+
+// pulse
+
+.steps__pulse {
+  position: absolute;
+  width: 35%;
+  right: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: $white;
+
+  @include tablets {
+    display: none;
+  }
+
+}
+
+
+//contols
+.steps__controls {
+  max-width: 585px;
+  position: relative;
+  margin-bottom: 58px;
+
+  @include phones {
+    margin-bottom: 30px;
+  }
+}
+
+.steps__names {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 18px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    bottom: 0;
+    border-radius: 25px;
+    background-color: #efefef;
+  }
+}
+
+.steps__names-item {
+  color: #7d7d7d;
+  font-size: 12px;
+
+  @include phones {
+    font-size: 10px;
+  }
+
+}
+.steps__names-item--active {
+  @include jost(medium);
+  color: #262626;
+}
+
+.steps__indicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -10px;
+  position: relative;
+}
+
+.steps__indicator-item {
+  width: 18px;
+  height: 18px;
+  background-color: #d7d7d7;
+  border-radius: 50%;
+  border: 4px solid #fff;
+}
+
+.steps__indicator-item--active {
+  background-color: #66A182;
+}
+
+// message
+
+.steps__message {
+  max-width: 585px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 55px;
+
+  @include phones {
+    margin-bottom: 35px;
+  }
+}
+
+.steps__message-pic {
+  margin-right: 20px;
+
+  @include phones {
+    margin-right: 14px;
+  }
+}
+
+.steps__message-img-wrap {
+  width: 54px;
+  height: 54px;
+
+  @include phones {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+.steps__message-img {
+  //
+}
+
+.steps__message-content {
+  //
+}
+
+.steps__message-name {
+  @include jost(medium);
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.steps__message-text {
+  font-size: 14px;
+  opacity: 0.6;
+
+  @include phones {
+    font-size: 12px;
+  }
+}
+
+.steps__form {
+  max-width: 660px;
+}
+
+.steps__question {
+  margin-top: 90px;
+  @include jost(meidum);
+  font-size: 12px;
+  color: #818181;
+  opacity: 0.7;
+
+  @include phones {
+    margin-top: 55px;
+    text-align: center;
+  }
+}
+
+.steps__question-link {
+  color: #90C6FD;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

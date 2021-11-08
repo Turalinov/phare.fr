@@ -1,0 +1,150 @@
+.form {
+  //
+}
+
+.form__elem {
+  //
+}
+
+.form__row {
+  display: flex;
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.form__row--between {
+  justify-content: space-between;
+  align-items: center;
+
+  @include phones {
+    flex-direction: row;
+  }
+
+  //
+  & .form__block:last-child {
+    @include phones {
+      flex-basis: 40%;
+    }
+  }
+
+  & .form__block + .form__block {
+
+    @include phones {
+      margin: 0;
+    }
+  }
+
+
+}
+
+.form__row + .form__row {
+  margin-top: 30px;
+
+  @include phones {
+    margin-top: 15px;
+  }
+}
+
+.form__block {
+  flex: 1;
+}
+
+.form__block + .form__block {
+  margin-left: 30px;
+
+  @include phones {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}
+
+.form__block-title {
+  font-size: 12px;
+  color: #000;
+}
+
+.form__block-desc {
+  font-size: 11px;
+  line-height: 20px;
+  opacity: 0.5;
+  margin-top: 3px;
+  color: #000;
+
+  @include phones {
+    font-size: 9px;
+  }
+}
+
+.form__input {
+  margin: 8px 0 8px;
+  width: 100%;
+  padding: 15px 25px;
+  background-color: #fff;
+  border: 1px solid #eaebed;
+  border-radius: 5px;
+
+  @include phones {
+    padding: 12px 15px;
+  }
+
+  &::placeholder {
+    color: #acb1b7;
+  }
+
+  &:focus {
+    border-color: $blue;
+  }
+}
+
+.form__error {
+  opacity: 0;
+  position: relative;
+  color: #fe6c6c;
+  font-size: 12px;
+  line-height: 17px;
+  margin-left: 16px;
+
+  @include phones {
+    font-size: 9px;
+  }
+
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-image: url("images/err.png");
+    top: 50%;
+    left: -16px;
+    transform: translateY(-50%);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include phones {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+.form__error--active {
+  opacity: 1;
+}
+
+.form__btn {
+  //
+}
+
+.form__btn--decorated {
+  padding-left: 30px!important;
+}
+
+.form__btn--large {
+  width: 100%;
+}
+

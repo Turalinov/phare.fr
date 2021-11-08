@@ -151,11 +151,11 @@
   box-sizing: border-box;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.025);
   animation: radio2 4s linear infinite;
-  animation-delay: 2s;
+  animation-delay: 1.5s;
 
   @include phones {
     animation: radio2-mob 4s linear infinite;
-    animation-delay: 2s;
+    animation-delay: 1.5s;
 
   }
 }
