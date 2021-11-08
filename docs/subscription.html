@@ -42,86 +42,191 @@
       <!-- controls -->
       <div class="steps__controls">
         <ul class="steps__names">
-          <li class="steps__names-item steps__names-item--active">Votre information</li>
-          <li class="steps__names-item">Votre entreprise</li>
+          <li class="steps__names-item">Votre information</li>
+          <li class="steps__names-item steps__names-item--active">Votre entreprise</li>
           <li class="steps__names-item">Récap</li>
         </ul>
 
 
         <ul class="steps__indicator">
-          <li class="steps__indicator-item steps__indicator-item--active"></li>
           <li class="steps__indicator-item"></li>
+          <li class="steps__indicator-item steps__indicator-item--active"></li>
           <li class="steps__indicator-item"></li>
         </ul>
       </div>
       <!-- controls -->
 
-      <!-- message -->
-      <div class="steps__message">
-        <div class="steps__message-pic">
-          <div class="steps__message-img-wrap">
-            <img src="images/woman2.png" alt="" class="steps__message-img">
+
+      <!-- step-form1 -->
+      <div id="step-form1">
+        <!-- message -->
+        <div class="steps__message">
+          <div class="steps__message-pic">
+            <div class="steps__message-img-wrap">
+              <img src="images/woman2.png" alt="" class="steps__message-img">
+            </div>
+          </div>
+          <div class="steps__message-content">
+            <div class="steps__message-name">
+              Emma
+            </div>
+            <div class="steps__message-text">
+              Bonjour, je suis Emma et je vais vous aider à souscrire le contrat Phare.
+              Etes-vous prêt à pilotez votre capital humain? Cela ne prendra plus de 3 minutes.
+            </div>
           </div>
         </div>
-        <div class="steps__message-content">
-          <div class="steps__message-name">
-            Emma
-          </div>
-          <div class="steps__message-text">
-            Bonjour, je suis Emma et je vais vous aider à souscrire le contrat Phare.
-            Etes-vous prêt à pilotez votre capital humain? Cela ne prendra plus de 3 minutes.
-          </div>
-        </div>
-      </div>
-      <!-- message -->
+        <!-- message -->
 
-      <!-- form -->
-      <div class="steps__form form">
-        <form action="#" class="form__elem" id="form1">
-          <div class="form__row">
-            <div class="form__block">
-              <div class="form__block-title">Votre prénom</div>
-              <input type="text" class="form__input" placeholder="Entrer votre prénom" name="firstname">
-              <div class="form__error">Cette case est obligatoire, veuillez-la remplir</div>
+        <!-- form -->
+        <div class="steps__form form">
+          <form action="#" class="form__elem" id="form1">
+            <div class="form__row">
+              <div class="form__block">
+                <div class="form__block-title">Votre prénom</div>
+                <input type="text" class="form__input" placeholder="Entrer votre prénom" name="firstname">
+                <div class="form__error">Cette case est obligatoire, veuillez-la remplir</div>
+              </div>
+              <div class="form__block">
+                <div class="form__block-title">Votre nom</div>
+                <input type="text" class="form__input" placeholder="Entrer votre prénom" name="lastname">
+                <div class="form__error">Cette case est obligatoire, veuillez-la remplir</div>
+              </div>
             </div>
-            <div class="form__block">
-              <div class="form__block-title">Votre nom</div>
-              <input type="text" class="form__input" placeholder="Entrer votre prénom" name="lastname">
-              <div class="form__error">Cette case est obligatoire, veuillez-la remplir</div>
-            </div>
-          </div>
 
-          <div class="form__row">
-            <div class="form__block">
-              <div class="form__block-title">Votre email</div>
-              <div class="form__block-desc">Toute l’information vous y sera envoyée</div>
-              <input type="text" class="form__input" placeholder="example@gmail.com" name="email">
-              <div class="form__error form__error--active">Cette case est obligatoire, veuillez-la remplir</div>
+            <div class="form__row">
+              <div class="form__block">
+                <div class="form__block-title">Votre email</div>
+                <div class="form__block-desc">Toute l’information vous y sera envoyée</div>
+                <input type="text" class="form__input" placeholder="example@gmail.com" name="email">
+                <div class="form__error form__error--active">Cette case est obligatoire, veuillez-la remplir</div>
+              </div>
+              <div class="form__block">
+                <div class="form__block-title">Téléphone</div>
+                <div class="form__block-desc">Pour le meilleur accompagnement lors de votre expérience Phare</div>
+                <input type="text" class="form__input" placeholder="+ 33 _ - __ - __ - __ - __" name="phone">
+                <div class="form__error">Cette case est obligatoire, veuillez-la remplir</div>
+              </div>
             </div>
-            <div class="form__block">
-              <div class="form__block-title">Téléphone</div>
-              <div class="form__block-desc">Pour le meilleur accompagnement lors de votre expérience Phare</div>
-              <input type="text" class="form__input" placeholder="+ 33 _ - __ - __ - __ - __" name="phone">
-              <div class="form__error">Cette case est obligatoire, veuillez-la remplir</div>
-            </div>
-          </div>
 
-          <div class="form__row form__row--between">
+            <div class="form__row form__row--between">
 
-            <div class="form__block">
+              <div class="form__block">
                 <a href="discover.html" class="btn btn--bordered btn--decorated form__btn form__btn--decorated"></a>
+              </div>
+
+              <div class="form__block">
+                <button class="btn form__btn form__btn--large">Valider</button>
+              </div>
+
             </div>
 
-            <div class="form__block">
-              <button class="btn form__btn form__btn--large">Valider</button>
-            </div>
 
-          </div>
-
-
-        </form>
+          </form>
+        </div>
+        <!-- form -->
       </div>
-      <!-- form -->
+
+      <!-- step-form2 -->
+      <div id="step-form2">
+        <!-- message -->
+        <div class="steps__message">
+          <div class="steps__message-pic">
+            <div class="steps__message-img-wrap">
+              <img src="images/woman2.png" alt="" class="steps__message-img">
+            </div>
+          </div>
+          <div class="steps__message-content">
+            <div class="steps__message-name">
+              Emma
+            </div>
+            <div class="steps__message-text">
+              On y est presque @Prénom! Il ne reste que l’information sur votre entreprise
+            </div>
+          </div>
+        </div>
+        <!-- message -->
+
+        <!-- form -->
+        <div class="steps__form form">
+          <form action="#" class="form__elem" id="form2">
+            <div class="form__row">
+              <div class="form__block">
+                <div class="form__block-title">SIRET</div>
+                <input type="text" class="form__input" placeholder="355555" name="siret">
+                <div class="form__error">Cette case est obligatoire, veuillez-la remplir</div>
+              </div>
+              <div class="form__block">
+                <div class="form__block-title">Nom de l’entreprise</div>
+                <input type="text" class="form__input" placeholder="Entrer le nom de l’entreprise" name="entreprise">
+                <div class="form__error">Cette case est obligatoire, veuillez-la remplir</div>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__block">
+                <div class="form__block-title">Adresse</div>
+                <input type="text" class="form__input" placeholder="ex.: Paris, 22 avenue ..." name="address">
+                <div class="form__error form__error--active">Cette case est obligatoire, veuillez-la remplir</div>
+              </div>
+              <div class="form__block">
+                <div class="form__block-title">Nombre de salariés</div>
+                <div class="form__select custom-select">
+
+                  <select name="salaries">
+                    <option>Choisir</option>
+                    <option value="0-50">0-50</option>
+                    <option value="51-100">51-100</option>
+                    <option value="101-500">101-500</option>
+                    <option value="501-1000">501-1000</option>
+                    <option value=">1000">>1000</option>
+                  </select>
+
+                </div>
+                <div class="form__error">Cette case est obligatoire, veuillez-la remplir</div>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__block">
+                <div class="form__block-title">Département</div>
+                <div class="form__select custom-select">
+
+                  <select name="department">
+                    <option>Choisir</option>
+                    <option value="Ressources Humaines">Ressources Humaines</option>
+                    <option value="CSE">CSE</option>
+                    <option value="Comptabilité et finances">Comptabilité et finances</option>
+                    <option value="Autre">Autre</option>
+                  </select>
+
+                </div>
+                <div class="form__error">Cette case est obligatoire, veuillez-la remplir</div>
+              </div>
+              <div class="form__block">
+                <div class="form__block-title">Role</div>
+                <input type="text" class="form__input" placeholder="ex.: RH ..." name="role">
+                <div class="form__error form__error--active">Cette case est obligatoire, veuillez-la remplir</div>
+              </div>
+            </div>
+
+            <div class="form__row form__row--between">
+
+              <div class="form__block">
+                <a class="btn btn--bordered btn--decorated form__btn form__btn--decorated"></a>
+              </div>
+
+              <div class="form__block">
+                <button class="btn form__btn form__btn--large">Valider</button>
+              </div>
+
+            </div>
+
+
+          </form>
+        </div>
+        <!-- form -->
+      </div>
+
+
 
       <!---->
       <div class="steps__question">

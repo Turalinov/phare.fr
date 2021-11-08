@@ -16,7 +16,13 @@
   left: 0;
   height: 100%;
   overflow: auto;
+  scrollbar-width: none;
   padding: 90px 140px 20px 120px;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
 
   @include tablets {
     width: 100%;
@@ -185,4 +191,8 @@
   &:hover {
     text-decoration: underline;
   }
+}
+
+#step-form1 {
+  display: none;
 }
