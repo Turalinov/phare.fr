@@ -123,6 +123,8 @@
   display: none;
 
   @include phones {
+    font-size: 12px;
+    @include jost(medium);
     margin-top: 40px;
     display: block;
     color: $blue;
