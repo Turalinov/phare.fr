@@ -39,6 +39,39 @@ button {
 }
 
 
-// .btn--large {
-//   padding: rem(19px) rem(99px);
-// }
+.btn--bordered {
+  border-color: $blue;
+  color: $blue;
+  background-color: $white;
+
+  &:hover {
+    color: $white;
+    background-color: $blue;
+  }
+}
+
+.btn--decorated {
+  position: relative;
+  padding-left: 40px!important;
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url(images/arrow-left.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+
+  }
+
+  &:hover {
+    &::before {
+      background-image: url(images/arrow-left-hover.svg);
+    }
+  }
+}

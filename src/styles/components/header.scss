@@ -16,3 +16,24 @@
     justify-content: space-between;
   }
 }
+
+.header__btn {
+  padding: 9px 20px;
+  font-size: 12px;
+}
+
+.header--discover {
+    padding: 20px 0;
+
+    & .header__btn {
+      @include phones {
+        display: none;
+      }
+    }
+
+    & .container {
+      @include phones {
+        justify-content: center;
+      }
+    }
+}

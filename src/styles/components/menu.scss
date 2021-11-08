@@ -213,21 +213,9 @@
 }
 
 .menu__btn {
-  padding: 9px 20px;
-  font-size: 12px;
 }
 
 .menu__btn+.menu__btn {
   margin-left: 15px;
 }
 
-.menu__btn--bordered {
-  border-color: $blue;
-  color: $blue;
-  background-color: $white;
-
-  &:hover {
-    color:$white;
-    background-color: $blue;
-  }
-}
