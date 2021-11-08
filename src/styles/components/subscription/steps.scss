@@ -80,6 +80,18 @@
   }
 }
 
+.steps__names::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 4px;
+    width: 50%;
+    bottom: 0;
+    border-radius: 25px;
+    background-color: #66A182;
+    // z-index: 0;
+}
+
 .steps__names-item {
   color: #7d7d7d;
   font-size: 12px;
@@ -103,6 +115,7 @@
 }
 
 .steps__indicator-item {
+  position: relative;
   width: 18px;
   height: 18px;
   background-color: #d7d7d7;
@@ -113,6 +126,7 @@
 .steps__indicator-item--active {
   background-color: #66A182;
 }
+
 
 // message
 
