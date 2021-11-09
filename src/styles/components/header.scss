@@ -50,3 +50,10 @@
     display: block;
   }
 }
+
+.header--demonstration {
+  padding: 20px 0;
+  & .container {
+    justify-content: center;
+  }
+}

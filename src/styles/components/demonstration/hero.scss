@@ -1,0 +1,209 @@
+.hero {
+  padding: 140px 0 55px;
+
+  @include tablets {
+    padding: 120px 0 50px;
+  }
+
+  @include phones {
+    padding: 85px 0 50px;
+  }
+}
+
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include tablets {
+    column-gap: 20px;
+  }
+
+  @include phones {
+    column-gap: initial;
+    flex-direction: column;
+  }
+}
+
+
+.hero__elem {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.hero__elem+.hero__elem {
+  @include phones {
+    margin-top: 20px;
+  }
+}
+
+.hero__title {
+  margin-bottom: 24px;
+  text-transform: initial;
+  line-height: 1.25;
+
+  @include tablets {
+    margin-bottom: 20px;
+  }
+
+  @include phones {
+    margin-bottom: 15px;
+  }
+}
+
+.hero__desc {
+  @include jost(medium);
+  font-size: 18px;
+  max-width: 408px;
+  margin-bottom: 30px;
+
+  @include tablets {
+    font-size: 16px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+}
+
+.hero__list {
+  max-width: 395px;
+
+  @include phones {
+    max-width: initial;
+  }
+}
+
+.hero__item {
+  position: relative;
+  margin-left: 35px;
+
+  @include tablets {
+    margin-left: 31px;
+    font-size: 14px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url('images/check-demo.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 0px;
+    left: -35px;
+    width: 20px;
+    height: 20px;
+
+    @include tablets {
+      top: 2px;
+      left: -31px;
+      width: 16px;
+      height: 16px;
+    }
+
+  }
+}
+
+.hero__item + .hero__item {
+  margin-top: 15px;
+}
+
+
+.hero__tabs {
+  max-width: 540px;
+  align-self: end;
+  background: #fff;
+  box-shadow: 0px 4px 40px -3px rgba(14, 104, 197, 0.05);
+  border-radius: 10px;
+
+  @include phones {
+    max-width: initial;
+    align-self: initial;
+  }
+}
+
+.hero__tabs .tabs__item {
+  width: 50%;
+  text-align: center;
+}
+
+.hero__tabs .tabs__btn {
+  color: rgba($black, 0.6);
+  width: 100%;
+  padding: 23px;
+
+  @include phones {
+    font-size: 12px;
+  }
+}
+
+.hero__tabs .tabs__btn--active,
+.hero__tabs .tabs__btn:hover {
+  color: #66a182;
+}
+
+
+.hero__tabs .tabs__content-wrap {
+  padding: 30px 35px 40px 35px;
+
+  @include phones {
+    padding: 24px;
+  }
+}
+
+.hero__tabs .tabs__content {
+  padding: 0;
+}
+
+
+.hero__form {
+  .form__row + .form__row {
+    margin-top: 20px;
+  }
+
+  .form__error {
+    font-size: 10px;
+  }
+
+  .form__block {
+    text-align: left;
+  }
+}
+
+
+.hero__call {
+  padding: 110px 60px 190px;
+
+  @include tablets {
+    padding: 40px 0 0 0;
+  }
+}
+
+.hero__call-title {
+  margin-bottom: 23px;
+
+  @include tablets {
+    line-height: 1.25;
+  }
+}
+
+.hero__call-text {
+  line-height: 1.25;
+  margin-bottom: 23px;
+
+  @include phones {
+    font-size: 12px;
+  }
+}
+
+.hero__call-btn {
+  //
+}
+
