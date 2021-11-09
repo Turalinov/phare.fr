@@ -1,0 +1,109 @@
+.lighthouse {
+  padding: 140px 0 55px;
+
+  @include tablets {
+    padding: 120px 0 50px;
+  }
+
+  @include phones {
+    padding: 85px 0 25px;
+  }
+}
+
+.lighthouse .container {
+}
+
+.lighthouse__wrap {
+}
+
+.lighthouse__title {
+  @include jost(medium);
+  font-size: 30px;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 17px;
+
+  @include tablets {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+
+  @include phones {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.lighthouse__desc {
+  @include jost(medium);
+  opacity: 0.5;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 53px;
+
+  @include tablets {
+    font-size: 16px;
+    margin-bottom: 45px;
+  }
+
+    @include phones {
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+}
+
+.lighthouse__form {
+  max-width: 915px;
+  background: #fff;
+  box-shadow: 0px 4px 40px -3px rgb(14 104 197 / 5%);
+  border-radius: 10px;
+  padding: 45px 50px;
+  margin: 0 auto 62px;
+
+  @include tablets {
+    padding: 35px;
+    margin: 0 auto 80px;
+  }
+
+    @include phones {
+      padding: 25px;
+      margin: 0 auto 127px;
+
+    }
+}
+
+.lighthouse__additional {
+  margin: 0 auto;
+  color: #7D7D7D;
+  font-size: 14px;
+
+    @include phones {
+      font-size: 12px;
+    }
+}
+
+.lighthouse__link {
+  color: $blue;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.lighthouse__btn {
+  display: block;
+  margin: 0 auto;
+}
+
+.lighthouse__contacts {
+  @include jost(medium);
+  display: block;
+  text-align: center;
+  color: rgba($black, 0.7);
+  font-size: 12px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
