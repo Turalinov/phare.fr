@@ -36,7 +36,17 @@ let customSelect = {
 
 
       for (let option of options) {
+
         let optionText = option.innerText
+
+
+        if (option.selected == true ) {
+
+          selectedItem.innerHTML = optionText
+        }
+
+
+
 
         let item = document.createElement('div');
         item.classList.add('item');

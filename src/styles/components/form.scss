@@ -39,6 +39,10 @@
 
 }
 
+.form__row--column {
+  flex-direction: column;
+}
+
 .form__row + .form__row {
   margin-top: 30px;
 
@@ -49,6 +53,10 @@
 
 .form__block {
   flex: 1;
+}
+
+.form__block--between {
+  display: flex;
 }
 
 .form__block + .form__block {
@@ -151,4 +159,88 @@
 
 .form__select {
   margin: 8px 0 8px;
+}
+
+
+.form__row-subtitle {
+  font-size: 14px;
+  @include jost(medium);
+  margin-bottom: 11px;
+}
+
+.form__adittional {
+  display: flex;
+  justify-content: space-between;
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.form__adittional-elem+.form__adittional-elem {
+  margin-top: 10px;
+}
+
+.form__adittional-elem p {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.form__adittional-elem p + p {
+  margin-top: 10px;
+}
+
+
+.form__checkbox {
+  display: none;
+}
+.form__appearance {
+  min-width: 16px;
+  width: 16px;
+  height: 16px;
+  background: $blue;
+  border-radius: 2px;
+  position: relative;
+  margin-right: 14px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-image: url(images/checkbox.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+
+}
+
+.form__checkbox:checked ~ .form__appearance::before {
+  width: 10px;
+  height: 8px;
+  transition: .2s;
+}
+
+
+.form__politics {
+  font-size: 12px;
+  color: #646464;
+
+  @include phones {
+    font-size: 10px;
+  }
+}
+
+.form__politics-link {
+  color: $blue;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
