@@ -2,6 +2,7 @@
 }
 
 .sheme__lottie {
+  transform: translateX(30px);
   @include phones {
     display: none;
   }

@@ -30,39 +30,74 @@
   }
 }
 
-.hsm__title {
+.hsm__title-wrap {
   position: relative;
   margin-bottom: 50px;
 
   @include phones {
     margin-bottom: 26px;
   }
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    background-image: url(images/question.svg);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    left: 340px;
-    top: 20px;
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
+.hsm__question {
+  position: absolute;
+  background-image: url("images/question.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 340px;
+  top: 20px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  transition: background-image .3s;
 
-    @include tablets {
-      left: 253px;
-      top: 13px;
-    }
+  &:hover {
+    background-image: url("images/question-hover.svg");
 
-    @include phones {
-      left: 169px;
-      top: 7px;
-      width: 13px;
-      height: 13px;
+    &::before {
+      opacity: 1;
     }
   }
+
+  &::before {
+    content: "Gestion du capital humain";
+    white-space: nowrap;
+    display: inline-block;
+    position: absolute;
+    background-color: $black;
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 2px;
+    left: 24px;
+    opacity: 0;
+    transition: opacity .3s;
+
+    @include phones {
+      left: 0;
+      top: -25px;
+    }
+  }
+
+  @include tablets {
+    left: 253px;
+    top: 13px;
+  }
+
+  @include phones {
+    left: 169px;
+    top: 7px;
+    width: 13px;
+    height: 13px;
+  }
+
+}
+
+
+.hsm__title {
+  position: relative;
+  pointer-events: none;
 
   & span:first-child {
     position: relative;
@@ -71,13 +106,14 @@
       content: "";
       position: absolute;
       left: 0;
-      bottom: 0;
+      bottom: 5px;
       display: block;
       height: 3px;
       background-color: $blue;
 
       @include phones {
         height: 1.5px;
+        bottom: 1px;
       }
     }
   }
