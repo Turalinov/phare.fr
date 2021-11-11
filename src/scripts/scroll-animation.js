@@ -32,7 +32,7 @@
               rendered: 'svg',
               loop: false,
               autoplay: false,
-              path: './json/technology__lottie.json',
+              path: './json/technology__lottie1.json',
             })
 
             console.log(technologyLottie.play());

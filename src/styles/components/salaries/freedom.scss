@@ -111,13 +111,13 @@
   display: flex;
   align-items: center;
   width: 260px;
-  justify-content: space-around;
+  justify-content: space-between;
   font-size: 23px;
   white-space: nowrap;
 
   &:hover {
     & .freedom__block-pic {
-      transform: scale(1.1);
+      // transform: scale(1.1);
     }
   }
 
@@ -301,7 +301,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  transition: all 1s ease;
+  transition: all .5s ease;
 
   @include tablets {
     width: 34px;
