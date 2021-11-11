@@ -15,21 +15,57 @@
 }
 
 .socials__link {
-  //
-}
-
-.socials__img {
-  fill: $socials-icons-color;
+  display: block;
   width: 20px;
   height: 20px;
-  transition: all 0.2s ease-out;
+  position: relative;
+  transition: .3s;
+  background-position: center;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
 
   @include phones {
     width: 18px;
     height: 18px;
-  }
-
-  &:hover {
-    fill: $blue;
+    background-size: 18px 18px;
   }
 }
+.socials__link--twitter {
+  background-image: url("images/twitter.svg");
+
+  &:hover {
+    background-image: url("images/twitter-hover.svg");
+  }
+}
+
+.socials__link--linkedin {
+  background-image: url("images/linkedin.svg");
+
+  &:hover {
+    background-image: url("images/linkedin-hover.svg");
+  }
+}
+
+.socials__link--facebook {
+  background-image: url("images/facebook.svg");
+
+  &:hover {
+    background-image: url("images/facebook-hover.svg");
+  }
+}
+.socials__link--youtube {
+  background-image: url("images/youtube.svg");
+
+  &:hover {
+    background-image: url("images/youtube-hover.svg");
+  }
+}
+
+.socials__link--instagram {
+  background-image: url("images/instagram.svg");
+
+  &:hover {
+    background-image: url("images/instagram-hover.svg");
+  }
+}
+

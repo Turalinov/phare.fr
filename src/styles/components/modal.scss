@@ -1,0 +1,73 @@
+.modal {
+  background: rgba(61, 70, 77, 0.7);
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  &.modal--showed {
+    display: block;
+  }
+}
+
+.modal__content {
+  max-width: 509px;
+  background-color: $white;
+  box-shadow: 0px 4px 40px rgba(14, 104, 197, 0.05);
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 85px 80px 70px;
+  text-align: center;
+
+  @include tablets {
+    padding: 55px 50px 40px;
+  }
+
+  @include phones {
+    min-width: 280px;
+    padding: 20px;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
+
+.modal__info {
+  //
+}
+
+.modal__title {
+  margin-bottom: 23px;
+
+  @include tablets {
+    line-height: 1.2;
+    margin-bottom: 13px;
+  }
+}
+
+.modal__text {
+  margin-bottom: 35px;
+
+  @include tablets {
+    margin-bottom: 25px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+}
+
+.modal__btn {
+  display: inline-block;
+}

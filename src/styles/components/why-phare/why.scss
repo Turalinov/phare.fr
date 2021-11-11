@@ -33,9 +33,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center -190px;
+  object-position: center -120px;
 
-  @include tablets {
+  @include phones {
     object-position: center;
   }
 }

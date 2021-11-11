@@ -1,3 +1,5 @@
+(function(){
+
 ! function (e) {
       function r(r) {
         for (var n, i, l = r[0], f = r[1], a = r[2], p = 0, s = []; p < l.length; p++) i = l[p], Object.prototype
@@ -72,3 +74,5 @@
       var c = f;
       t()
     }([])
+
+})();

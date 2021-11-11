@@ -13,19 +13,23 @@
 .promote-slider__content {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
   // column-gap: 160px;
   margin: 0 auto;
 
   @include phones {
     flex-direction: column-reverse;
     justify-content: initial;
+    align-items: center;
   }
 }
 .promote-slider__left {
+    position: relative;
     max-width: 356px;
+    margin-top: 170px;
 
     @include phones {
+      margin-top: initial;
       max-width: initial;
       text-align: center;
     }
@@ -74,7 +78,10 @@
 
 
 .promote-slider__controls {
+  position: absolute;
   width: 150px;
+  left: 0;
+  top: 190px;
 
   @include phones {
     display: none;
@@ -117,7 +124,7 @@
 .promote-slider__icon {
   width: 12px;
   height: 12px;
-  fill: blue;
+  fill: $blue;
 }
 
 .promote-slider__pagination {

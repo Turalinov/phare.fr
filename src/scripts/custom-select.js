@@ -1,4 +1,5 @@
-let customSelect = {
+(function(){
+  let customSelect = {
   selector: '.custom-select',
 
   run(customSelects) {
@@ -137,3 +138,5 @@ let customSelect = {
 }
 
 customSelect.init()
+
+})();

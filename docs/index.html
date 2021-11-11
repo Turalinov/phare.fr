@@ -187,37 +187,37 @@
       <div class="hsm__graph-wrap  _anim-items _anim-no-hide">
         <div class="hsm__graph">
 
-          <svg class="hsm__leaves">
+          <svg class="layer hsm__leaves">
             <use xlink:href="images/icons/sprite.svg#leaves"></use>
           </svg>
 
-          <svg class="hsm__peoples">
+          <svg class="layer hsm__peoples">
             <use xlink:href="images/icons/sprite.svg#peoples"></use>
           </svg>
 
-          <div class="hsm__check">
+          <div class="layer hsm__check">
             <img src="images/check.svg" alt="check" class="hsm__check-img">
           </div>
 
-          <div class="hsm__home">
+          <div class="layer hsm__home">
             <img src="images/home.svg" alt="check" class="hsm__home-img">
           </div>
 
 
-          <div class="hsm__woman">
+          <div class="layer hsm__woman">
             <img src="images/woman.png" alt="woman" class="hsm__woman-img">
           </div>
 
-          <div class="hsm__woman2">
+          <div class="layer hsm__woman2">
             <img src="images/woman2.png" alt="woman" class="hsm__woman2-img">
           </div>
 
 
-          <div class="hsm__man">
+          <div class="layer hsm__man">
             <img src="images/man.png" alt="woman" class="hsm__man-img">
           </div>
 
-          <div class="hsm__trained">
+          <div class="layer hsm__trained">
             <div class="trained">
   <div class="trained__preview">
     <svg class="trained__icon">
@@ -243,13 +243,13 @@
 
           </div>
 
-          <div class="hsm__classement-demondes">
+          <div class="layer hsm__classement-demondes">
             <div class="classement-demondes">
               <img src="images/classment1.png" alt="" class="classement-demondes__icon">
             </div>
           </div>
 
-          <div class="hsm__report">
+          <div class="layer hsm__report">
             <!-- report -->
             <div class="report">
     <div class="report__preview">
@@ -271,20 +271,20 @@
           </div>
 
 
-          <div class="hsm__total">
+          <div class="layer hsm__total">
             <div class="total">
   <img src="images/total.svg" alt="" class="total__icon">
 </div>
 
           </div>
 
-          <div class="hsm__action-impact-large">
+          <div class="layer hsm__action-impact-large">
             <div class="action-impact-large">
               <img src="images/action-impact-large.svg" alt="" class="action-impact-large__icon">
             </div>
           </div>
 
-          <div class="hsm__session">
+          <div class="layer hsm__session">
             <div class="session">
   <img src="images/session.png" alt="" class="session__icon">
 </div>
@@ -292,7 +292,7 @@
           </div>
 
 
-          <div class="hsm__taux">
+          <div class="layer hsm__taux">
             <div class="taux">
   <img src="images/taux.png" alt="" class="taux__icon">
 </div>
@@ -336,21 +336,24 @@
     <div class="subtitle measure__text">votre politique sociale en quelques clics</div>
     <div class="measure__video video">
       <div class="video__wrap">
+        <div class="video__player" id="video__player">
+        </div>
         <!-- flex -->
-        <div class="video__preview">
+        <div class="video__preview" id="video__preview">
           <div class="video__title">Phare<span class="dot">.</span></div>
           <div class="video__img-wrap">
             <img src="images/imac.png" class="video__img" alt="imac">
           </div>
-        </div>
-        <div class="video__btn">
+          <div class="video__btn" id="video__btn">
+          </div>
         </div>
 
       </div>
-      <div class="video__player"></div>
     </div>
   </div>
 </section>
+
+<!-- <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/644759142?h=0da22ba5bc&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Phare"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script> -->
 
         <section class="section technology">
   <div class="container">
@@ -458,16 +461,14 @@
             <div class="footer__menu-title">A propos</div>
             <div class="footer__menu-links">
               <a href="why-phare.html" class="footer__menu-link">Pourquoi Phare</a>
-              <a href="#" class="footer__menu-link">Blog</a>
-              <a href="#" class="footer__menu-link">Nous rejoindre</a>
             </div>
           </li>
 
           <li class="footer__menu-item">
             <div class="footer__menu-title">Données et <br class="br-phones">confidentialité</div>
             <div class="footer__menu-links">
-              <a href="#" class="footer__menu-link">Politique de confidentialité</a>
-              <a href="#" class="footer__menu-link">Politique des cookies</a>
+              <a href="politics.html" class="footer__menu-link">Politique de confidentialité</a>
+              <a href="politics-cookies.html" class="footer__menu-link">Politique des cookies</a>
               <a href="#" class="footer__menu-link">Mentions legales</a>
             </div>
           </li>
@@ -480,38 +481,23 @@
       <div class="footer__socials socials">
         <ul class="socials__list">
           <li class="socials__item">
-            <a href="#" target="blank" class="socials__link" title="">
-              <svg class="socials__img">
-                <use xlink:href="images/icons/sprite.svg#twitter"></use>
-              </svg>
+            <a href="#" target="blank" class="socials__link socials__link--twitter" title="">
             </a>
           </li>
           <li class="socials__item">
-            <a href="#" target="blank" class="socials__link" title="">
-              <svg class="socials__img">
-                <use xlink:href="images/icons/sprite.svg#linkedin"></use>
-              </svg>
+            <a href="#" target="blank" class="socials__link socials__link--linkedin" title="">
             </a>
           </li>
           <li class="socials__item">
-            <a href="#" target="blank" class="socials__link" title="">
-              <svg class="socials__img">
-                <use xlink:href="images/icons/sprite.svg#facebook"></use>
-              </svg>
+            <a href="#" target="blank" class="socials__link socials__link--facebook" title="">
             </a>
           </li>
           <li class="socials__item">
-            <a href="#" target="blank" class="socials__link" title="">
-              <svg class="socials__img">
-                <use xlink:href="images/icons/sprite.svg#youtube"></use>
-              </svg>
+            <a href="#" target="blank" class="socials__link socials__link--youtube" title="">
             </a>
           </li>
           <li class="socials__item">
-            <a href="#" target="blank" class="socials__link" title="">
-              <svg class="socials__img">
-                <use xlink:href="images/icons/sprite.svg#instagram"></use>
-              </svg>
+            <a href="#" target="blank" class="socials__link socials__link--instagram" title="">
             </a>
           </li>
         </ul>
@@ -524,14 +510,35 @@
       <div class="footer__copyright">
         Copyright @ 2021
       </div>
-      <a href="#" class="footer__support">
-        Centre dé support
+      <a href="#" id="support" class="footer__support">
+        Centre de support
       </a>
     </div>
 
 
   </div>
 </footer>
+
+<div class="modal" id="modal-support">
+
+  <div class="modal__content">
+    <div class="modal__close">
+      <img src="images/close-icon.svg" alt="close button">
+    </div>
+
+    <div class="modal__info">
+      <h4 class="modal__title">Contactez-nous dès maintenant</h4>
+      <div class="modal__text">
+          Une personne de notre équipe est disponible pour
+          échanger en direct avec vous
+      </div>
+      <a href="tel:0184601005" class="btn modal__btn">01 84 60 10 05</a>
+    </div>
+
+
+  </div>
+</div>
+<script src="https://player.vimeo.com/api/player.js"></script>
 
   </div>
 
