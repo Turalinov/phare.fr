@@ -16,7 +16,7 @@
     if(isset($post['messageObj'])) {
 
 
- 
+
 
 
 
@@ -32,16 +32,16 @@
           foreach ($data as $key => $value) {
 
             if ($key == "formtype") {
-              
+
               if( $value == "reco" ) {
                 $subject = "Convaincre mon RH/CSE";
               } else if ($value == "demo" ) {
                 $subject = "Demandez une démo";
 
-              } else { 
+              } else {
                 $subject = "Souscrire le contrat";
-                
-            
+
+
               }
 
 
@@ -70,7 +70,7 @@
               $key = "Role";
             } else if ($key == "address") {
               $key = "Address";
-            } 
+            }
               $message .=  $key . ": " . $value ."<br>";
           }
 
@@ -95,7 +95,7 @@
 
               echo json_encode(array('status' => true));  exit();
             } catch (Exception $e) {
-    
+
               echo json_encode(array('status' => false, 'error' => $mail->ErrorInfo));  exit();
             }
 
