@@ -8,25 +8,27 @@
       <div class="steps__content-wrap" id="steps__content-wrap">
               <!-- controls -->
               <div class="steps__controls">
-                <!-- steps__names--done2 -->
-                <ul class="steps__names steps__names--done3">
-                  <li class="steps__names-item">Votre information</li>
-                  <li class="steps__names-item steps__names-item--active">Votre entreprise</li>
+                <!-- steps__names--done2/3 -->
+                <ul class="steps__names">
+                  <li class="steps__names-item steps__names-item--active ">Votre information</li>
+                  <li class="steps__names-item">Votre entreprise</li>
+                  <!-- steps__names-item--active -->
                   <li class="steps__names-item">Récap</li>
                 </ul>
 
 
                 <ul class="steps__indicator">
                   <li class="steps__indicator-item steps__indicator-item--active"></li>
-                  <li class="steps__indicator-item steps__indicator-item--active"></li>
-                  <li class="steps__indicator-item steps__indicator-item--active"></li>
+                  <!-- steps__indicator-item--active -->
+                  <li class="steps__indicator-item"></li>
+                  <li class="steps__indicator-item"></li>
                 </ul>
               </div>
               <!-- controls -->
 
 
               <!-- step-form1 -->
-              <div id="step-form1">
+              <div id="step-form1" class="active">
                 <!-- message -->
                 <div class="steps__message">
                   <div class="steps__message-pic">
@@ -66,15 +68,15 @@
                       <div class="form__block">
                         <div class="form__block-title">Votre email</div>
                         <div class="form__block-desc">Toute l’information vous y sera envoyée</div>
-                        <input type="text" class="form__input" placeholder="example@gmail.com" name="email">
-                        <div class="form__error form__error--active">Cette case est obligatoire, veuillez-la remplir
+                        <input type="email" class="form__input" placeholder="example@gmail.com" name="email">
+                        <div class="form__error">Cette case est obligatoire, veuillez-la remplir
                         </div>
                       </div>
                       <div class="form__block">
                         <div class="form__block-title">Téléphone</div>
                         <div class="form__block-desc">Pour le meilleur accompagnement lors de votre expérience Phare
                         </div>
-                        <input type="text" class="form__input" placeholder="+ 33 _ - __ - __ - __ - __" name="phone">
+                        <input type="text" class="form__input tel" placeholder="+ 33 _ - __ - __ - __ - __" name="phone">
                         <div class="form__error">Cette case est obligatoire, veuillez-la remplir</div>
                       </div>
                     </div>
@@ -87,7 +89,7 @@
                       </div>
 
                       <div class="form__block">
-                        <button class="btn form__btn form__btn--large">Valider</button>
+                        <button class="btn form__btn form__btn--large" id="step-btn1">Valider</button>
                       </div>
 
                     </div>
@@ -137,7 +139,7 @@
                       <div class="form__block">
                         <div class="form__block-title">Adresse</div>
                         <input type="text" class="form__input" placeholder="ex.: Paris, 22 avenue ..." name="address">
-                        <div class="form__error form__error--active">Cette case est obligatoire, veuillez-la remplir
+                        <div class="form__error">Cette case est obligatoire, veuillez-la remplir
                         </div>
                       </div>
                       <div class="form__block">
@@ -176,7 +178,7 @@
                       <div class="form__block">
                         <div class="form__block-title">Role</div>
                         <input type="text" class="form__input" placeholder="ex.: RH ..." name="role">
-                        <div class="form__error form__error--active">Cette case est obligatoire, veuillez-la remplir
+                        <div class="form__error">Cette case est obligatoire, veuillez-la remplir
                         </div>
                       </div>
                     </div>
@@ -184,7 +186,7 @@
                     <div class="form__row form__row--between">
 
                       <div class="form__block">
-                        <a class="btn btn--bordered btn--decorated form__btn form__btn--decorated"></a>
+                        <a class="btn btn--bordered btn--decorated form__btn form__btn--decorated" id="step-back2"></a>
                       </div>
 
                       <div class="form__block">
@@ -224,7 +226,7 @@
                   <div class="steps__change-title">
                     Votre information
                   </div>
-                  <button class="btn btn--bordered btn--decorated">Modifier</button>
+                  <button class="btn btn--bordered btn--decorated" id="modifier">Modifier</button>
                 </div>
 
 
@@ -235,14 +237,13 @@
                     <div class="form__row">
                       <div class="form__block">
                         <div class="form__block-title">Votre prénom</div>
-                        <input type="text" class="form__input" placeholder="Entrer votre prénom" name="firstname_check"
-                          value="Prénom">
+                        <input type="hidden" name="formtype" value="sub">
+                        <input type="text" class="form__input" placeholder="Entrer votre prénom" name="firstname_check">
                         <div class="form__error">Cette case est obligatoire, veuillez-la remplir</div>
                       </div>
                       <div class="form__block">
                         <div class="form__block-title">Votre nom</div>
-                        <input type="text" class="form__input" placeholder="Entrer votre prénom" name="lastname_check"
-                          value="Nom">
+                        <input type="text" class="form__input" placeholder="Entrer votre prénom" name="lastname_check">
                         <div class="form__error">Cette case est obligatoire, veuillez-la remplir</div>
                       </div>
                     </div>
@@ -251,17 +252,16 @@
                       <div class="form__block">
                         <div class="form__block-title">Votre email</div>
                         <div class="form__block-desc">Toute l’information vous y sera envoyée</div>
-                        <input type="text" class="form__input" placeholder="example@gmail.com" name="email_check"
-                          value="example@gmail.com">
-                        <div class="form__error form__error--active">Cette case est obligatoire, veuillez-la remplir
+                        <input type="text" class="form__input" placeholder="example@gmail.com" name="email_check">
+                        <div class="form__error">Cette case est obligatoire, veuillez-la remplir
                         </div>
                       </div>
                       <div class="form__block">
                         <div class="form__block-title">Téléphone</div>
                         <div class="form__block-desc">Pour le meilleur accompagnement lors de votre expérience Phare
                         </div>
-                        <input type="text" class="form__input" placeholder="+ 33 _ - __ - __ - __ - __"
-                          name="phone_check" value="+ 33 7 - 44 - 55 - 30 - 00">
+                        <input type="text" class="form__input tel" placeholder="+ 33 _ - __ - __ - __ - __"
+                          name="phone_check" >
                         <div class="form__error">Cette case est obligatoire, veuillez-la remplir</div>
                       </div>
                     </div>
@@ -307,9 +307,9 @@
                         <div class="form__block-title">Département</div>
                         <div class="form__select custom-select">
 
-                          <select name="department_check">
+                          <select name="department_check" id="department-main">
                             <option>Choisir</option>
-                            <option value="Ressources Humaines" selected>Ressources Humaines</option>
+                            <option value="Ressources Humaines">Ressources Humaines</option>
                             <option value="CSE">CSE</option>
                             <option value="Comptabilité et finances">Comptabilité et finances</option>
                             <option value="Autre">Autre</option>
@@ -320,9 +320,8 @@
                       </div>
                       <div class="form__block">
                         <div class="form__block-title">Role</div>
-                        <input type="text" class="form__input" placeholder="ex.: RH ..." name="role_check"
-                          value="Responsable RH">
-                        <div class="form__error form__error--active">Cette case est obligatoire, veuillez-la remplir
+                        <input type="text" class="form__input" placeholder="ex.: RH ..." name="role_check">
+                        <div class="form__error">Cette case est obligatoire, veuillez-la remplir
                         </div>
                       </div>
                     </div>
@@ -342,12 +341,12 @@
 
                       <div class="form__adittional">
                         <div class="form__adittional-elem">
-                          <p id="entreprise_check">16 RUE DU BOUT D'EN HAUT 45490</p>
-                          <p id="siret_check">Siret N°: 50115638400015</p>
+                          <p id="entreprise_check"></p>
+                          <p>Siret N°: <span id="siret_check"></span></p>
                         </div>
                         <div class="form__adittional-elem">
                           <p id="address_check">TREILLES EN GATINAIS France</p>
-                          <p id="salaries_check">Nombre de salariés : 45</p>
+                          <p>Nombre de salariés : <span id="salaries_check"></span></p>
                         </div>
                       </div>
 
@@ -355,7 +354,7 @@
 
                     <div class="form__row">
                       <label class="form__block form__block--between">
-                        <input type="checkbox" class="form__checkbox" name="politics">
+                        <input type="checkbox" class="form__checkbox" name="politics" id="check-poliitics">
                         <div class="form__appearance"></div>
                         <div class="form__politics">La transparence compte chez Phare. Regardez nos <a href="#"
                             class="form__politics-link" target="blank">Termes et Conditions</a> avant de cocher cette
@@ -367,7 +366,7 @@
                     <div class="form__row form__row--between">
 
                       <div class="form__block">
-                        <a class="btn btn--bordered btn--decorated form__btn form__btn--decorated"></a>
+                        <a class="btn btn--bordered btn--decorated form__btn form__btn--decorated" id="step-back3"></a>
                       </div>
 
                       <div class="form__block">

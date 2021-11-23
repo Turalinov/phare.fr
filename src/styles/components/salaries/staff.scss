@@ -82,6 +82,7 @@
 }
 
 .staff__btn {
+  display: inline-block;
   @include jost();
 
   @include phones {

@@ -25,6 +25,7 @@
   }
 }
 .dimension__btn {
+  display: inline-block;
   @include phones {
     width: 100%;
   }

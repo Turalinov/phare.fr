@@ -3,7 +3,7 @@
   text-align: center;
 
   @include phones {
-    padding-bottom: 30px;
+    padding: 100px 0 30px;
   }
 
   & .container {
@@ -58,11 +58,15 @@
   // }
 }
 
+.resolution__btn {
+  display: inline-block;
+}
+
 .resolution__scheme {
   margin-bottom: 40px;
 
   @include phones {
-    order: -1;
+    margin-top: 90px;
   }
 }
 

@@ -80,6 +80,7 @@
                     <div class="form__row">
                       <div class="form__block">
                         <div class="form__block-title">Prénom</div>
+                        <input type="hidden" name="formtype" value="demo">
                         <input type="text" class="form__input" placeholder="Arbia" name="firstname">
                         <div class="form__error">Cette case est obligatoire, veuillez-la remplir</div>
                       </div>
@@ -94,8 +95,8 @@
                     <div class="form__row">
                       <div class="form__block">
                         <div class="form__block-title">Votre email</div>
-                        <input type="text" class="form__input" placeholder="example@gmail.com" name="email">
-                        <div class="form__error form__error--active">Cette case est obligatoire, veuillez-la remplir
+                        <input type="email" class="form__input" placeholder="example@gmail.com" name="email">
+                        <div class="form__error">Cette case est obligatoire, veuillez-la remplir
                         </div>
                       </div>
                     </div>
@@ -128,7 +129,7 @@
                     <div class="form__row">
                       <div class="form__block">
                         <div class="form__block-title">Téléphone</div>
-                        <input type="text" class="form__input" placeholder="+ 33 _ - __ - __ - __ - __" name="phone">
+                        <input type="text" class="form__input tel" placeholder="+ 33 _ - __ - __ - __ - __" name="phone">
                         <div class="form__error">Cette case est obligatoire, veuillez-la remplir</div>
                       </div>
                       <div class="form__block">
@@ -160,9 +161,9 @@
                 <p class="hero__call-text">
                   Une personne de notre équipe est disponible pour échanger en direct avec vous
                 </p>
-                <button class="btn hero__call-btn">
+                <a href="tel:0184601005" class="btn hero__call-btn">
                   01 84 60 10 05
-                </button>
+                </a>
               </div>
             </div>
           </div>

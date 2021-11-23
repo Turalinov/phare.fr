@@ -96,10 +96,7 @@
 }
 
 .steps__names--done2::after {
-
-
     width: 50%;
-
     // z-index: 0;
 }
 
@@ -291,24 +288,39 @@
   //
 }
 
-
-
 #step-form1 {
   display: none;
+  &.active {
+    display: block;
+  }
 }
 
 #step-form2 {
   display: none;
+
+  &.active {
+    display: block;
+  }
 }
 
 #step-form3 {
-  // display: none
+  display: none;
+
+  &.active {
+    display: block;
+  }
 }
 
 #steps__content-wrap {
-  display: none;
+  &.hide {
+    display: none;
+  }
 }
 
 #steps__thanks {
+  display: none;
 
+  &.active {
+    display: flex;
+  }
 }

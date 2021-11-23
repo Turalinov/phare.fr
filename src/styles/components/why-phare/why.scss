@@ -118,6 +118,7 @@
 }
 
 .why__btn {
+  display: inline-block;
   @include jost();
   margin-top: 40px;
 

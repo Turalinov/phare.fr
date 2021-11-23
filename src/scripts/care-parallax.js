@@ -1,7 +1,7 @@
 (function(){
   console.log('care parallax');
 
-  careDevices = document.querySelector('.care__devices');
+  let careDevices = document.querySelector('.care__devices');
 
   if (careDevices) {
 

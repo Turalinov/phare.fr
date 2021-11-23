@@ -67,6 +67,14 @@ task('json', () => {
   return src([`${SRC_PATH}/json/*.json`])
     .pipe(dest(`${DIST_PATH}/json/`))
 })
+task('php', () => {
+  return src([`${SRC_PATH}/*.php`])
+    .pipe(dest(`${DIST_PATH}`))
+})
+task('php-mailer', () => {
+  return src([`${SRC_PATH}/PHPMailer/*/**`])
+    .pipe(dest(`${DIST_PATH}/PHPMailer/`))
+})
 
 
 task('icons', () => {
@@ -93,6 +101,12 @@ task('favicon', () => {
     .pipe(dest(DIST_PATH))
 })
 
+task('libs', () => {
+  return src([`${SRC_PATH}/libs/*.js`])
+    .pipe(dest(`${DIST_PATH}/libs/`))
+})
+
+
 
 task('scripts', () => {
   return src([
@@ -101,9 +115,9 @@ task('scripts', () => {
   ])
     .pipe(gulpif(env === 'dev', sourcemaps.init()))
     .pipe(concat('main.min.js', {newLine: ";"}))
-    .pipe(gulpif(env === 'prod', babel({
-      presets: ['@babel/env']
-    })))
+    // .pipe(gulpif(env === 'prod', babel({
+    //   presets: ['@babel/env']
+    // })))
     .pipe(gulpif(env === 'prod', uglify()))
     .pipe(gulpif(env === 'dev', sourcemaps.write()))
     .pipe(dest(DIST_PATH))
@@ -125,13 +139,15 @@ task('watch', () => {
   watch(`./${SRC_PATH}/scripts/*`, series('scripts'))
   watch(`./${SRC_PATH}/images/icons/*.svg`, series('icons'))
   watch(`./${SRC_PATH}/json/*.json`, series('json'))
+  watch(`./${SRC_PATH}/*.php`, series('php'))
+  watch(`./${SRC_PATH}/libs/*.js`, series('libs'))
   watch([`./${SRC_PATH}/images/*.png`, `./${SRC_PATH}/images/*.svg`], series('images'))
 })
 
 task('default',
   series(
     "clean",
-    parallel("copy:html", "styles", "scripts", "icons", "favicon", "images", "json"),
+    parallel("copy:html", "styles", "scripts", "icons", "favicon", "images", "json", "php", "libs", "php-mailer"),
     parallel("watch", "server")
   )
 )
@@ -140,6 +156,6 @@ task('default',
 task("build",
   series(
     "clean",
-    parallel("copy:html", "styles", "scripts", "icons", "favicon", "images", "json")
+    parallel("copy:html", "styles", "scripts", "icons", "favicon", "images", "json", "php", "libs", "php-mailer")
   )
 )
