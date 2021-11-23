@@ -32,16 +32,17 @@
   height: 100%;
   display: flex;
   align-items: center;
-  background: linear-gradient(305.75deg, #d9d9d9 21.17%, rgba(255, 255, 255, 0) 81.12%);
+  // background: linear-gradient(305.75deg, #d9d9d9 21.17%, rgba(255, 255, 255, 0) 81.12%);
+  background-color: $white;
   justify-content: space-between;
-  padding: 65px 100px 65px 224px;
+  // padding: 65px 100px 65px 224px;
 
   @include tablets {
-    padding: 35px 70px 35px 94px;
+    // padding: 35px 70px 35px 94px;
   }
 
   @include phones {
-    padding: 26px 22px 22px 26px;
+    // padding: 26px 22px 22px 26px;
   }
 }
 
@@ -64,16 +65,16 @@
 }
 
 .video__img-wrap {
-  margin-left: 80px;
-  width: 602px;
+  // margin-left: 80px;
+  width: 100%;
 
   @include tablets {
-    width: 472px;
+    // width: 472px;
   }
 
   @include phones {
-    margin-left: 0;
-    width: 141px;
+    // margin-left: 0;
+    // width: 141px;
   }
 }
 

@@ -115,6 +115,10 @@
   }
 
 }
+.steps__names-item--centered {
+  transform: translateX(-25px);
+}
+
 .steps__names-item--active {
   @include jost(medium);
   color: #262626;
